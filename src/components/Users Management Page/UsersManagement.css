@@ -1,0 +1,44 @@
+
+.titlu {
+  text-align: center;
+  color: #ffffff;
+}
+
+.card{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.carduri{
+  width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 4px 3px 20px 0px  #6a6a6a;
+  color: #000000;
+  background-color: #ffffff87;
+}
+.carduri h3{
+  height: 20px;
+  padding-bottom: 20px;
+}
+.butonCard{
+	width: 25%;
+	height: 30px;
+	border: 1px solid;
+	background: rgb(116 130 131);
+	border-radius: 25px;
+	font-size: 9px;
+	color: #000000;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	margin-right: 15px;
+}
+.butonCard:hover{
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	transition: 0.9s;
+}
