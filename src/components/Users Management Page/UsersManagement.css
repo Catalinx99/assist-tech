@@ -32,7 +32,7 @@ td {
   background-color: rgb(158, 168, 169);
 }
 
-form {
+.form {
   display: flex;
   gap: 5px;
 }
@@ -46,5 +46,8 @@ form * {
   font-size: 14px;
 }
 .addContact {
-  justify-content: center;
+text-align: center;
+}
+.addContact input {
+  margin-right: 10px;
 }
