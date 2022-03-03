@@ -100,7 +100,7 @@ const UsersManagement = () => {
   return (
     <div className="appContainer">
       <h2>Users Management</h2>
-      <form onSubmit={handleEditFormSubmit}>
+      <form onSubmit={handleEditFormSubmit} className="form">
         <table>
           <thead>
             <tr>

@@ -8,11 +8,13 @@ function App() {
   return (
     <Router>
       <div>
-        <Header />
         <Switch>
           <Route exact path="/" component={LogIn} />
           <Route path="/forgotpw" component={ForgotPsw} />
-          <Route path="/usermanagement" component={UsersManagement} />
+          <div>
+            <Header />
+            <Route path="/usermanagement" component={UsersManagement} />
+          </div>
         </Switch>
       </div>
     </Router>
