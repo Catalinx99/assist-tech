@@ -46,6 +46,7 @@ form * {
   font-size: 14px;
 }
 .addContact {
+  justify-content: center;
 text-align: center;
 }
 .addContact input {
