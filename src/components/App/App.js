@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BuildingManagement from '../BuildingManagement/BuildingManagement';
 import Header from '../Header/Header';
 import ForgotPsw from "../Login/ForgotPsw";
 import LogIn from "../Login/LogIn";
@@ -14,6 +15,7 @@ function App() {
           <div>
             <Header />
             <Route path="/usermanagement" component={UsersManagement} />
+            <Route path="/BuildingManagement" component={BuildingManagement} />
           </div>
         </Switch>
       </div>

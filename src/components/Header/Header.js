@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 import "./HeaderCss.css";
 
 const Header = () => {
+  const [userRole, setUserRole] = useState('employee');
+  const [headerTabs, setHeaderTabs] = useState([]);
+
   const headerNavbar = {
-    Administrator: [
+    admin: [
       {
         name: 'Management',
         link: "/#"
@@ -29,7 +33,7 @@ const Header = () => {
         link: '/#'
       }
     ],
-    OfficeAdministrator: [
+    officeAdministrator: [
       {
         name: 'Office Status',
         link: '/#'
@@ -44,7 +48,7 @@ const Header = () => {
         link: '/#'
       }
     ],
-    Employee: [
+    employee: [
       {
         name: 'Office Status',
         link: '/#'
@@ -56,23 +60,41 @@ const Header = () => {
         link: '/#'
       }
     ]
-
   }
-  var datarole = [
-    {
-      role: 'Administrator'
-    }, {
-      role: 'Ofice Administrator'
-    }, {
-      role: 'Employee'
-    }
-  ];
+
+  // useEffect(() => {
+  //   switch (userRole) {
+  //     case "admin":
+  //       return (
+  //         setHeaderTabs(headerNavbar.admin)
+  //       );
+  //     case "officeAdministrator":
+  //       return (
+  //         setHeaderTabs(headerNavbar.officeAdministrator)
+  //       );
+  //     case "employee":
+  //       return (
+  //         setHeaderTabs(headerNavbar.employee)
+  //       );
+  //     default:
+  //       return;
+  //   }
+  // });
+
   return (
     <div className="header">
-
-
+      <div className="logoPanel">Logo</div>
+      <div className="tabsPanel">
+        <div className="navStyle">Home</div>
+        <div className="navStyle">Users</div>
+        {/* {headerTabs.map((tab, index) => {
+          return (
+              <div key={index} className="navStyle">{tab.name}</div>
+          )
+        })} */}
+      </div>
     </div>
   )
 }
 
-export default Header
+export default Header;
