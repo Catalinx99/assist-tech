@@ -1,9 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "../UsersManagementPage/UsersManagement.css";
-import { buildingItems } from "../../Common/components/constants";
+import serviceApi from "../services";
 
 const BuildingManagement = () => {
-  const [buildings, setBuidings] = useState();
+  const service = new serviceApi();
+  const [buildings, setBuidings] = useState([]);
+  const getBuildings = () => {
+    service.get('buildings').then((data) => {
+      setBuidings(data);
+    })
+  }
+  useEffect(() => {
+    getBuildings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   return (
     <div className="appContainer">
       <h2>Buildings Management</h2>
@@ -16,7 +26,7 @@ const BuildingManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {buildingItems.map((building, index) =>
+          {buildings.map((building, index) =>
             <tr key={index}>
               <td>{building.name}</td>
               <td>{building.floorsCount}</td>
