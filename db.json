@@ -41,10 +41,65 @@
     {
       "fullName": "John",
       "address": "Test address",
-      "phoneNumber": "0230555666",
+      "phoneNumber": "0230555666j",
       "email": "john@email.com",
-      "id": 6,
-      "status": false
+      "id": 6
+    }
+  ],
+  "buildings": [
+    {
+      "name": "Building 1",
+      "floorsCount": 3,
+      "address": "Suceava City",
+      "id": 1
+    },
+    {
+      "name": "Building 2",
+      "floorsCount": 1,
+      "address": "Botosani",
+      "id": 2
+    },
+    {
+      "name": "Building 3",
+      "floorsCount": 2,
+      "address": "Brasov",
+      "id": 3
+    },
+    {
+      "name": "Building 4",
+      "floorsCount": 1,
+      "address": "Bucuresti",
+      "id": 4
+    },
+    {
+      "name": "Building 5",
+      "floorsCount": 5,
+      "address": "Botosani",
+      "id": 5
+    },
+    {
+      "name": "Building 6",
+      "floorsCount": 3,
+      "address": "Suceava",
+      "id": 6
+    },
+    {
+      "name": "Building 4",
+      "floorsCount": 1,
+      "address": "Bucuresti",
+      "id": 7
+    },
+    {
+      "name": "Building 5",
+      "floorsCount": 5,
+      "address": "Botosani",
+      "id": 8
+    },
+    {
+      "name": "Building 6",
+      "floorsCount": 3,
+      "address": "Suceava",
+      "id": 9
     }
   ]
 }
