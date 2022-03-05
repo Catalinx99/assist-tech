@@ -3,7 +3,7 @@ import BuildingManagement from '../BuildingManagement/BuildingManagement';
 import Header from '../Header/Header';
 import ForgotPsw from "../Login/ForgotPsw";
 import LogIn from "../Login/LogIn";
-import UsersManagement from '../Users Management Page/UsersManagement';
+import UsersManagement from '../UsersManagementPage/UsersManagement';
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
           <Route path="/forgotpw" component={ForgotPsw} />
           <div>
             <Header />
-            <Route path="/usermanagement" component={UsersManagement} />
-            <Route path="/BuildingManagement" component={BuildingManagement} />
+            <Route path="/user-management" component={UsersManagement} />
+            <Route path="/building-management" component={BuildingManagement} />
           </div>
         </Switch>
       </div>
