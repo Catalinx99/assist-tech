@@ -3,7 +3,7 @@ const headers = {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
 }
-const domain = 'http://localhost:3000';
+const domain = 'http://localhost:3001';
 
 function joinURL(baseURL, url) {
   return `${baseURL}/${url}`;
@@ -37,12 +37,9 @@ class serviceApi {
     }
     return this.request(url, method).then(res => res.json());
   }
-  put(url, id) {
+  put(url, data) {
     const method = "PUT";
-    if (id) {
-      url = `${url}/${id}`;
-    }
-    return this.request(url, method).then(res => res.json());
+    return this.request(url, method, data).then(res => res.json());
   }
 
 }
