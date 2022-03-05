@@ -1,9 +1,9 @@
 import { useState } from "react"
-import data from "../Users Management Page/MockData.json";
-import "../Users Management Page/UsersManagement.css";
+import "../UsersManagementPage/UsersManagement.css";
+import { buildingItems } from "../../Common/components/constants";
 
 const BuildingManagement = () => {
-  const [buildings, setBuidings] = useState(data);
+  const [buildings, setBuidings] = useState();
   return (
     <div className="appContainer">
       <h2>Buildings Management</h2>
@@ -16,18 +16,18 @@ const BuildingManagement = () => {
           </tr>
         </thead>
         <tbody>
-          {buildings.map((building, index) =>
+          {buildingItems.map((building, index) =>
             <tr key={index}>
-              <td>{building.fullName}</td>
-              <td> {building.phoneNumber} </td>
+              <td>{building.name}</td>
+              <td>{building.floorsCount}</td>
               <td>{building.address}</td>
             </tr>
+
           )}
         </tbody>
       </table>
-
     </div>
   )
 }
 
-export default BuildingManagement
+export default BuildingManagement;

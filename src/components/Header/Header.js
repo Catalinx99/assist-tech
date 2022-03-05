@@ -1,97 +1,48 @@
 import { useEffect, useState } from "react";
+
 import "./HeaderCss.css";
+import {
+  headerTabsLabel,
+  userRoleLabel
+} from '../../Common/components/constants'
 
 const Header = () => {
-  const [userRole, setUserRole] = useState('employee');
+  const [userRole, setUserRole] = useState('admin');
   const [headerTabs, setHeaderTabs] = useState([]);
 
-  const headerNavbar = {
-    admin: [
-      {
-        name: 'Management',
-        link: "/#"
-      }, {
-        name: 'Building Management',
-        link: '/#'
-      }, {
-        name: 'Office Management',
-        link: '/#'
-      }, {
-        name: 'Office Status',
-        link: '/#'
-      }, {
-        name: 'Desk Assignment',
-        link: '/#'
-      }, {
-        name: 'Request to work remote',
-        link: '/#'
-      }, {
-        name: 'Remote work approval',
-        link: '/#'
-      }, {
-        name: 'User Status',
-        link: '/#'
-      }
-    ],
-    officeAdministrator: [
-      {
-        name: 'Office Status',
-        link: '/#'
-      }, {
-        name: 'Desk Assignment',
-        link: '/#'
-      }, {
-        name: 'Request to work remote',
-        link: '/#'
-      }, {
-        name: 'User Status',
-        link: '/#'
-      }
-    ],
-    employee: [
-      {
-        name: 'Office Status',
-        link: '/#'
-      }, {
-        name: 'Request to work remote',
-        link: '/#'
-      }, {
-        name: 'User Status',
-        link: '/#'
-      }
-    ]
+  const getHeaderTabs = () => {
+    switch (userRole) {
+      case userRoleLabel.adminType:
+        return (
+          setHeaderTabs(headerTabsLabel.admin)
+        );
+      case userRoleLabel.officeAdmType:
+        return (
+          setHeaderTabs(headerTabsLabel.officeAdministrator)
+        );
+      case userRoleLabel.employeeType:
+        return (
+          setHeaderTabs(headerTabsLabel.employee)
+        );
+      default:
+        return;
+    }
   }
 
-  // useEffect(() => {
-  //   switch (userRole) {
-  //     case "admin":
-  //       return (
-  //         setHeaderTabs(headerNavbar.admin)
-  //       );
-  //     case "officeAdministrator":
-  //       return (
-  //         setHeaderTabs(headerNavbar.officeAdministrator)
-  //       );
-  //     case "employee":
-  //       return (
-  //         setHeaderTabs(headerNavbar.employee)
-  //       );
-  //     default:
-  //       return;
-  //   }
-  // });
+  useEffect(() => {
+    getHeaderTabs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="header">
       <div className="logoPanel">Logo</div>
       <div className="tabsPanel">
-        <div className="navStyle">Home</div>
-        <div className="navStyle">Users</div>
-        {/* {headerTabs.map((tab, index) => {
+        {headerTabs.map((tab, index) => {
           return (
-              <div key={index} className="navStyle">{tab.name}</div>
+            <a href={tab.link} key={index} className="navStyle">{tab.name}</a>
           )
-        })} */}
+        })}
       </div>
     </div>
   )
