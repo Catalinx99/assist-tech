@@ -1,6 +1,5 @@
 import "./UsersManagement.css"
 import { useState, Fragment, useEffect } from "react";
-import { nanoid } from 'nanoid';
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
 import serviceApi from '../services'
@@ -66,34 +65,36 @@ const UsersManagement = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
     const newContact = {
-      id: nanoid(),
       fullName: addFormData.fullName,
       address: addFormData.address,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
     };
 
-    const newContacts = [...contacts, newContact];
-    setContacts(newContacts);
+    services.post('users', newContact).then(() => {
+      const newContacts = [...contacts, newContact];
+      setContacts(newContacts);
+    });
+
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
     const editedContact = {
-      id: editContactId,
       fullName: editFormData.fullName,
       address: editFormData.address,
       phoneNumber: editFormData.phoneNumber,
       email: editFormData.email
     }
-    const newContacts = [...contacts];
 
-    const index = contacts.findIndex((contact) => contact.id === editContactId);
-    newContacts[index] = editedContact;
+    services.put(`users/${editContactId}`, editedContact).then(() => {
+      const newContacts = [...contacts];
 
-    setContacts(newContacts);
-    setEditContactId(null);
+      const index = contacts.findIndex((contact) => contact.id === editContactId);
+      newContacts[index] = editedContact;
+      setContacts(newContacts);
+    })
   }
 
   const handleEditClick = (event, contact) => {

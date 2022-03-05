@@ -50,3 +50,7 @@ text-align: center;
 .addContact input {
   margin-right: 10px;
 }
+
+.deactivated .contactField{
+  opacity: 50%;
+}
