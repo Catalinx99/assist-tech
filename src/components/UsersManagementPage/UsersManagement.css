@@ -12,7 +12,8 @@
 }
 
 table {
-  border-collapse: collapse;
+  border-spacing: 0;
+  border-collapse: unset;
   width: 100%;
 }
 
@@ -21,7 +22,7 @@ td {
   border: 1px solid #000000;
   text-align: left;
   padding: 8px;
-  font-size: 32px;
+  font-size: 14px;
 }
 
 th {
@@ -42,9 +43,6 @@ form td:last-child {
   justify-content: space-evenly;
 }
 
-form * {
-  font-size: 14px;
-}
 .addContact {
   justify-content: center;
 text-align: center;
