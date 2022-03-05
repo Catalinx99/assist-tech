@@ -1,13 +1,28 @@
 import "./UsersManagement.css"
-import data from "./MockData.json";
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { nanoid } from 'nanoid';
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
+import serviceApi from '../services'
 
 
 const UsersManagement = () => {
-  const [contacts, setContacts] = useState(data);
+  const services = new serviceApi();
+  const [contacts, setContacts] = useState([]);
+
+  const getUsers = () => {
+    services.get('users').then((data) => {
+      setContacts(data);
+    });
+  }
+
+  useEffect(() => {
+    getUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+
   const [addFormData, setAddFormData] = useState({
     fullName: '',
     address: '',
@@ -113,14 +128,14 @@ const UsersManagement = () => {
           </thead>
           <tbody>
             {contacts.map((contact) => (
-              <Fragment>
+              <>
                 {editContactId === contact.id ?
                   (<EditableRow editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick} />) :
                   (<ReadOnlyRow contact={contact}
                     handleEditClick={handleEditClick} />)}
-              </Fragment>
+              </>
             ))}
           </tbody>
         </table>
