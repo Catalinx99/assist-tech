@@ -74,8 +74,14 @@ const UsersManagement = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
     const newContact = {
+<<<<<<< HEAD
       firstName: addFormData.firstName,
       lastName: addFormData.lastName,
+=======
+      fullName: addFormData.fullName,
+      address: addFormData.address,
+      phoneNumber: addFormData.phoneNumber,
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
       email: addFormData.email,
       password: addFormData.password,
       role: addFormData.role,
@@ -95,6 +101,7 @@ const UsersManagement = () => {
     event.preventDefault();
 
     const editedContact = {
+<<<<<<< HEAD
       firstName: editFormData.firstName,
       lastName: editFormData.lastName,
       email: editFormData.email,
@@ -104,6 +111,12 @@ const UsersManagement = () => {
       birthDate: editFormData.birthDate,
       nationality: editFormData.nationality,
       status: editFormData.status
+=======
+      fullName: editFormData.fullName,
+      address: editFormData.address,
+      phoneNumber: editFormData.phoneNumber,
+      email: editFormData.email
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
     }
 
     services.put(`users/${editContactId}`, editedContact).then(() => {
