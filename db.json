@@ -1,6 +1,53 @@
 {
   "users": [
     {
+<<<<<<< HEAD
+      "firstName": "Jennyss",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "2022-04-09",
+      "nationality": "sss",
+      "status": "false",
+      "id": 1
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "sdasdasd",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "22212-02-02",
+      "nationality": "22",
+      "status": "true",
+      "id": 2
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chasn",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "23222-02-01",
+      "nationality": "s",
+      "status": "true",
+      "id": 3
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chazn",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "2222-02-22",
+      "nationality": "2",
+      "status": "ss",
+=======
       "id": 1,
       "fullName": "Jenny Chan",
       "address": "3 waterfoot road",
@@ -28,10 +75,57 @@
       "address": "333 miltown manor",
       "phoneNumber": "011-962-111",
       "email": "jeremy.clark@email.com",
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
       "id": 4
     },
     {
       "id": 5,
+<<<<<<< HEAD
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "03.12.1999",
+      "status": true
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "1999-03-03",
+      "nationality": "s",
+      "status": "true",
+      "id": 6
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "123",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "1111-01-02",
+      "nationality": "1",
+      "status": true,
+      "id": 7
+    },
+    {
+      "firstName": "Catalin",
+      "lastName": "Prisacaru",
+      "email": "p.catalinv@yahoo.com",
+      "password": "123qweasdzxc",
+      "role": "Administrator",
+      "gender": "male",
+      "birthDate": "2222-02-02",
+      "nationality": "romanian",
+      "status": "false",
+      "id": 8
+=======
       "fullName": "Raymond Edwards",
       "address": "99 blue acres",
       "phoneNumber": "3231-962-7516",
@@ -100,6 +194,7 @@
       "floorsCount": 3,
       "address": "Suceava",
       "id": 9
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
     }
   ]
 }

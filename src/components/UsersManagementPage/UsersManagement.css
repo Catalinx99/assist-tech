@@ -12,17 +12,26 @@
 }
 
 table {
+<<<<<<< HEAD
+  border-collapse: collapse;
+  width: 100% !important;
+=======
   border-spacing: 0;
   border-collapse: unset;
   width: 100%;
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
 
 th,
 td {
   border: 1px solid #000000;
-  text-align: left;
+  text-align: center;
   padding: 8px;
+<<<<<<< HEAD
+  font-size: 1vw !important;
+=======
   font-size: 14px;
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
 
 th {
@@ -36,6 +45,7 @@ td {
 .form {
   display: flex;
   gap: 5px;
+  justify-content: center;
 }
 
 form td:last-child {
@@ -43,9 +53,15 @@ form td:last-child {
   justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
+form * {
+  font-size: 10px;
+}
+=======
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 .addContact {
   justify-content: center;
-text-align: center;
+  text-align: center;
 }
 .addContact input {
   margin-right: 10px;
@@ -53,4 +69,13 @@ text-align: center;
 
 .deactivated .contactField{
   opacity: 50%;
+<<<<<<< HEAD
+}
+.hidetext { -webkit-text-security: disc; 
+}
+.sss input{
+  font-size: 1.1vw !important;
+  width: 80%;
+=======
+>>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
