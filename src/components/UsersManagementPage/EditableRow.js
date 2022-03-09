@@ -3,7 +3,7 @@ import "./UsersManagement.css";
 
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
   return (
-    <tr className='sss'>
+    <tr className='inputs'>
       <td>
         <input
           type="text"
@@ -86,8 +86,8 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
           onChange={handleEditFormChange} />
       </td>
       <td>
-        <button type='submit'> Save </button>
-        <button type='button' onClick={handleCancelClick}>
+        <button type='submit' className="button"> Save </button>
+        <button type='button' onClick={handleCancelClick} className="button">
           Cancel </button>
       </td>
     </tr >

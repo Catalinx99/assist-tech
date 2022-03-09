@@ -5,7 +5,7 @@ export const headerTabsLabel = {
       link: "/user-management"
     }, {
       name: 'Building Management',
-      link: '/#'
+      link: '/building-management'
     }, {
       name: 'Office Management',
       link: '/#'
