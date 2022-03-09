@@ -12,17 +12,16 @@
 }
 
 table {
-  border-spacing: 0;
-  border-collapse: unset;
-  width: 100%;
+  border-collapse: collapse;
+  width: 100% !important;
 }
 
 th,
 td {
   border: 1px solid #000000;
-  text-align: left;
+  text-align: center;
   padding: 8px;
-  font-size: 14px;
+  font-size: 1vw !important;
 }
 
 th {
@@ -36,6 +35,7 @@ td {
 .form {
   display: flex;
   gap: 5px;
+  justify-content: center;
 }
 
 form td:last-child {
@@ -43,9 +43,12 @@ form td:last-child {
   justify-content: space-evenly;
 }
 
+form * {
+  font-size: 10px;
+}
 .addContact {
   justify-content: center;
-text-align: center;
+  text-align: center;
 }
 .addContact input {
   margin-right: 10px;
@@ -53,4 +56,10 @@ text-align: center;
 
 .deactivated .contactField{
   opacity: 50%;
+}
+.hidetext { -webkit-text-security: disc; 
+}
+.sss input{
+  font-size: 1.1vw !important;
+  width: 80%;
 }
