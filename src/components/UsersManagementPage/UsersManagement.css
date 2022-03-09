@@ -8,18 +8,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 1rem;
+  padding: 16px;
+
 }
 
 table {
-<<<<<<< HEAD
   border-collapse: collapse;
   width: 100% !important;
-=======
-  border-spacing: 0;
-  border-collapse: unset;
-  width: 100%;
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
 
 th,
@@ -27,11 +22,7 @@ td {
   border: 1px solid #000000;
   text-align: center;
   padding: 8px;
-<<<<<<< HEAD
   font-size: 1vw !important;
-=======
-  font-size: 14px;
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
 
 th {
@@ -53,29 +44,51 @@ form td:last-child {
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
 form * {
   font-size: 10px;
 }
-=======
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 .addContact {
   justify-content: center;
   text-align: center;
 }
 .addContact input {
   margin-right: 10px;
+  font-size: 1vw;
+  width: 10%;
 }
 
 .deactivated .contactField{
   opacity: 50%;
-<<<<<<< HEAD
 }
 .hidetext { -webkit-text-security: disc; 
 }
-.sss input{
+.inputs input{
   font-size: 1.1vw !important;
   width: 80%;
-=======
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
 }
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 4px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  
+  .button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 10%;
+  }
+  
+  .button:hover {
+    background-color: #555555;
+    color: white;
+  }

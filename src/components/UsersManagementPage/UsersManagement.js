@@ -74,14 +74,8 @@ const UsersManagement = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
     const newContact = {
-<<<<<<< HEAD
       firstName: addFormData.firstName,
       lastName: addFormData.lastName,
-=======
-      fullName: addFormData.fullName,
-      address: addFormData.address,
-      phoneNumber: addFormData.phoneNumber,
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
       email: addFormData.email,
       password: addFormData.password,
       role: addFormData.role,
@@ -101,7 +95,6 @@ const UsersManagement = () => {
     event.preventDefault();
 
     const editedContact = {
-<<<<<<< HEAD
       firstName: editFormData.firstName,
       lastName: editFormData.lastName,
       email: editFormData.email,
@@ -111,12 +104,6 @@ const UsersManagement = () => {
       birthDate: editFormData.birthDate,
       nationality: editFormData.nationality,
       status: editFormData.status
-=======
-      fullName: editFormData.fullName,
-      address: editFormData.address,
-      phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email
->>>>>>> 01d250e73fad1950fadcb82fc6e70b95f7dc6621
     }
 
     services.put(`users/${editContactId}`, editedContact).then(() => {
@@ -240,8 +227,15 @@ const UsersManagement = () => {
           placeholder="Enter a nationality"
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button type="submit" className="button">Add</button>
       </form>
+      <p> What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+      </p>
     </div>
   )
 }

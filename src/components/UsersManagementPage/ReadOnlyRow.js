@@ -15,7 +15,7 @@ const ReadOnlyRow = ({ contact, handleEditClick }) => {
       <td className='contactField'> {contact.nationality} </td>
       <td className='contactField'> {contact.status} </td>
       <td>
-        <button type='button' onClick={(event) => handleEditClick(event, contact)}>
+        <button type='button' onClick={(event) => handleEditClick(event, contact)} className="button">
           Edit
         </button>
       </td>
