@@ -211,6 +211,23 @@ const UsersManagement = () => {
           name="gender"
           required="required"
           placeholder="Enter a gender"
+<<<<<<< HEAD
+=======
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="birthDate"
+          required="required"
+          placeholder="Enter a birth-date"
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="nationality"
+          required="required"
+          placeholder="Enter a nationality"
+>>>>>>> 1040b98e190138ed6f40dd805392b07b544737d0
           onChange={handleAddFormChange}
         />
         <input

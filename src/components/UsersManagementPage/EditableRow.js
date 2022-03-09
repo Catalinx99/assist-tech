@@ -3,7 +3,11 @@ import "./UsersManagement.css";
 
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
   return (
+<<<<<<< HEAD
     <tr className='inputs'>
+=======
+    <tr className='sss'>
+>>>>>>> 1040b98e190138ed6f40dd805392b07b544737d0
       <td>
         <input
           type="text"

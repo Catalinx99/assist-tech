@@ -62,6 +62,7 @@ form * {
 }
 .hidetext { -webkit-text-security: disc; 
 }
+<<<<<<< HEAD
 .inputs input{
   font-size: 1.1vw !important;
   width: 80%;
@@ -92,3 +93,9 @@ form * {
     background-color: #555555;
     color: white;
   }
+=======
+.sss input{
+  font-size: 1.1vw !important;
+  width: 80%;
+}
+>>>>>>> 1040b98e190138ed6f40dd805392b07b544737d0
