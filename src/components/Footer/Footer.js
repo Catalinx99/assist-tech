@@ -2,7 +2,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footers">
+
+    <div className="footer">
       <p className="copyright">
         &copy; Assist Tech
       </p>
