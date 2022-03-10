@@ -23,17 +23,26 @@ const UsersManagement = () => {
 
 
   const [addFormData, setAddFormData] = useState({
-    fullName: '',
-    address: '',
-    phoneNumber: '',
-    email: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    role: '',
+    gender: '',
+    birthDate: '',
+    nationality: ''
   })
 
   const [editFormData, setEditFormData] = useState({
-    fullName: '',
-    address: '',
-    phoneNumber: '',
-    email: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    role: '',
+    gender: '',
+    birthDate: '',
+    nationality: '',
+    status: ''
   })
 
 
@@ -65,10 +74,14 @@ const UsersManagement = () => {
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
     const newContact = {
-      fullName: addFormData.fullName,
-      address: addFormData.address,
-      phoneNumber: addFormData.phoneNumber,
+      firstName: addFormData.firstName,
+      lastName: addFormData.lastName,
       email: addFormData.email,
+      password: addFormData.password,
+      role: addFormData.role,
+      gender: addFormData.gender,
+      birthDate: addFormData.birthDate,
+      nationality: addFormData.nationality
     };
 
     services.post('users', newContact).then(() => {
@@ -82,10 +95,15 @@ const UsersManagement = () => {
     event.preventDefault();
 
     const editedContact = {
-      fullName: editFormData.fullName,
-      address: editFormData.address,
-      phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email
+      firstName: editFormData.firstName,
+      lastName: editFormData.lastName,
+      email: editFormData.email,
+      password: editFormData.password,
+      role: editFormData.role,
+      gender: editFormData.gender,
+      birthDate: editFormData.birthDate,
+      nationality: editFormData.nationality,
+      status: editFormData.status
     }
 
     services.put(`users/${editContactId}`, editedContact).then(() => {
@@ -102,10 +120,15 @@ const UsersManagement = () => {
     setEditContactId(contact.id);
 
     const formValues = {
-      fullName: contact.fullName,
-      address: contact.address,
-      phoneNumber: contact.phoneNumber,
+      firstName: contact.firstName,
+      lastName: contact.lastName,
       email: contact.email,
+      password: contact.password,
+      role: contact.role,
+      gender: contact.gender,
+      birthDate: contact.birthDate,
+      nationality: contact.nationality,
+      status: contact.status
     }
     setEditFormData(formValues);
   }
@@ -120,10 +143,15 @@ const UsersManagement = () => {
         <table>
           <thead>
             <tr>
-              <th> Name </th>
-              <th> Address </th>
-              <th> Phone Number </th>
-              <th> Email </th>
+              <th> First Name </th>
+              <th> Last Name </th>
+              <th> Email address </th>
+              <th> Password </th>
+              <th> Role </th>
+              <th> Gender </th>
+              <th> Birth date </th>
+              <th> Nationality </th>
+              <th> Status </th>
               <th> Actions </th>
             </tr>
           </thead>
@@ -145,23 +173,16 @@ const UsersManagement = () => {
       <form onSubmit={handleAddFormSubmit} className="addContact">
         <input
           type="text"
-          name="fullName"
+          name="firstName"
           required="required"
-          placeholder="Enter a name"
+          placeholder="Enter first-name"
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="address"
+          name="lastName"
           required="required"
-          placeholder="Enter an address"
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="phoneNumber"
-          required="required"
-          placeholder="Enter a phone number"
+          placeholder="Enter last-name"
           onChange={handleAddFormChange}
         />
         <input
@@ -171,7 +192,42 @@ const UsersManagement = () => {
           placeholder="Enter an email"
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <input
+          type="password"
+          name="password"
+          required="required"
+          placeholder="Enter a password"
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="role"
+          required="required"
+          placeholder="Enter a role"
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="gender"
+          required="required"
+          placeholder="Enter a gender"
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="birthDate"
+          required="required"
+          placeholder="Enter a birth-date"
+          onChange={handleAddFormChange}
+        />
+        <input
+          type="text"
+          name="nationality"
+          required="required"
+          placeholder="Enter a nationality"
+          onChange={handleAddFormChange}
+        />
+        <button type="submit" className="button">Add</button>
       </form>
     </div>
   )

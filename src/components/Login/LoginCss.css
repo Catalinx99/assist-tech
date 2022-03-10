@@ -4,7 +4,6 @@ body {
 	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),  url('../../assets/images/background.jpg');
 	background-size: cover;
 	height: 100vh;
-	overflow: hidden;
 }
 .center {
 	position: absolute;
@@ -76,6 +75,7 @@ form .txt_field{
 }
 .pass a{
   color: #000000;
+	font-size: 14px;
 }
 .pass:hover{
   text-decoration: underline;
@@ -105,4 +105,11 @@ input[type="submit"]:hover{
 	font-size: 30px;
 	text-decoration: none;
 	color: inherit;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
 }

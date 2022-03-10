@@ -7,6 +7,9 @@
 .logoPanel{
   float:left;
   padding: 5px;
+  height: 30px;
+  width: 60px;
+  margin-top: 10px;
 }
 .tabsPanel{
   float:right;
@@ -14,8 +17,24 @@
 }
 .navStyle{
   padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 a{
  color: #000000;
  text-decoration:none;
+}
+.iconButton {
+  margin-left: auto!important;
+}
+.MuiBox-root {
+  justify-content: end;
+}
+.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+  background-color:rgb(116 130 131) !important;
+  color: #000000 !important ;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list{
+  background-color:rgb(116 130 131);
 }

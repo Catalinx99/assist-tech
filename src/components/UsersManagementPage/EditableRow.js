@@ -1,38 +1,30 @@
 import React from 'react'
+import "./UsersManagement.css";
 
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
   return (
-    <tr>
+    <tr className='inputs'>
       <td>
         <input
-          text="text"
+          type="text"
           required="required"
-          placeholder='Enter a name'
-          name='fullName'
-          value={editFormData.fullName}
+          placeholder='Enter first-name'
+          name='firstName'
+          value={editFormData.firstName}
           onChange={handleEditFormChange} />
       </td>
       <td>
         <input
-          text="text"
+          type="text"
           required="required"
-          placeholder='Enter an address'
-          name='address'
-          value={editFormData.address}
+          placeholder='Enter a last-name'
+          name='lastName'
+          value={editFormData.lastName}
           onChange={handleEditFormChange} />
       </td>
       <td>
         <input
-          text="text"
-          required="required"
-          placeholder='Enter a phone number'
-          name='phoneNumber'
-          value={editFormData.phoneNumber}
-          onChange={handleEditFormChange} />
-      </td>
-      <td>
-        <input
-          text="email"
+          type="email"
           required="required"
           placeholder='Enter an email'
           name='email'
@@ -40,11 +32,65 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
           onChange={handleEditFormChange} />
       </td>
       <td>
-        <button type='submit'> Save </button>
-        <button type='button' onClick={handleCancelClick}>
+        <input
+          type="password"
+          required="required"
+          placeholder='Enter a password'
+          name='password'
+          value={editFormData.password}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <input
+          type="text"
+          required="required"
+          placeholder='Enter an role'
+          name='role'
+          value={editFormData.role}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <input
+          type="text"
+          required="required"
+          placeholder='Enter a gender'
+          name='gender'
+          value={editFormData.gender}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <input
+          type="date"
+          required="required"
+          placeholder='Enter a birth-date'
+          name='birthDate'
+          value={editFormData.birthDate}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <input
+          type="text"
+          required="required"
+          placeholder='Enter a nationality'
+          name='nationality'
+          value={editFormData.nationality}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <input
+          type="text"
+          required="required"
+          placeholder='Enter a status'
+          name='status'
+          value={editFormData.status}
+          onChange={handleEditFormChange} />
+      </td>
+      <td>
+        <button type='submit' className="button"> Save </button>
+        <button type='button' onClick={handleCancelClick} className="button">
           Cancel </button>
       </td>
-    </tr>
+    </tr >
   )
 }
 
