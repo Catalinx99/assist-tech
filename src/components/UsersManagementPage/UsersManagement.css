@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 16px;
-
+  margin-bottom: 90px;
 }
 
 table {
@@ -22,7 +22,7 @@ td {
   border: 1px solid #000000;
   text-align: center;
   padding: 8px;
-  font-size: 1vw !important;
+  font-size: 14px !important;
 }
 
 th {
@@ -53,7 +53,7 @@ form * {
 }
 .addContact input {
   margin-right: 10px;
-  font-size: 1vw;
+  font-size: 14px;
   width: 10%;
 }
 
@@ -63,32 +63,32 @@ form * {
 .hidetext { -webkit-text-security: disc; 
 }
 .inputs input{
-  font-size: 1.1vw !important;
+  font-size: 14px !important;
   width: 80%;
 }
 .button {
-    background-color: #4CAF50; 
-    border: none;
-    color: white;
-    padding: 4px 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 4px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
   
   
-  .button {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-    border-radius: 10%;
-  }
-  
-  .button:hover {
-    background-color: #555555;
-    color: white;
-  }
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 10%;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
