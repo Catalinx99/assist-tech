@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+import logo from "./icon.png";
 
 import "./HeaderCss.css";
 import {
@@ -56,6 +57,7 @@ const Header = () => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
+        <img src={logo} alt="logo" className="logoPanel" />
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
