@@ -1,0 +1,155 @@
+{
+  "users": [
+    {
+      "firstName": "Jennyss",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "2022-04-09",
+      "nationality": "sss",
+      "status": "false",
+      "id": 1
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "sdasdasd",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "22212-02-02",
+      "nationality": "22",
+      "status": "true",
+      "id": 2
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chasn",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "23222-02-01",
+      "nationality": "s",
+      "status": "true",
+      "id": 3
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chazn",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "2222-02-22",
+      "nationality": "2",
+      "status": "ss",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "03.12.1999",
+      "status": true
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "*******",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "1999-03-03",
+      "nationality": "s",
+      "status": "true",
+      "id": 6
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Chan",
+      "email": "jenny.chan@email.com",
+      "password": "123",
+      "role": "user",
+      "gender": "female",
+      "birthDate": "1111-01-02",
+      "nationality": "1",
+      "status": true,
+      "id": 7
+    },
+    {
+      "firstName": "Catalin",
+      "lastName": "Prisacaru",
+      "email": "p.catalinv@yahoo.com",
+      "password": "123qweasdzxc",
+      "role": "Administrator",
+      "gender": "male",
+      "birthDate": "2222-02-02",
+      "nationality": "romanian",
+      "status": "false",
+      "id": 8
+    }
+  ],
+  "buildings": [
+    {
+      "name": "Building 1",
+      "floorsCount": 3,
+      "address": "Suceava City",
+      "id": 1
+    },
+    {
+      "name": "Building 2",
+      "floorsCount": 1,
+      "address": "Botosani",
+      "id": 2
+    },
+    {
+      "name": "Building 3",
+      "floorsCount": 2,
+      "address": "Brasov",
+      "id": 3
+    },
+    {
+      "name": "Building 4",
+      "floorsCount": 1,
+      "address": "Bucuresti",
+      "id": 4
+    },
+    {
+      "name": "Building 5",
+      "floorsCount": 5,
+      "address": "Botosani",
+      "id": 5
+    },
+    {
+      "name": "Building 6",
+      "floorsCount": 3,
+      "address": "Suceava",
+      "id": 6
+    },
+    {
+      "name": "Building 4",
+      "floorsCount": 1,
+      "address": "Bucuresti",
+      "id": 7
+    },
+    {
+      "name": "Building 5",
+      "floorsCount": 5,
+      "address": "Botosani",
+      "id": 8
+    },
+    {
+      "name": "Building 6",
+      "floorsCount": 3,
+      "address": "Suceava",
+      "id": 9
+    }
+  ]
+}

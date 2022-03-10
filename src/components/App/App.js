@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch,} from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BuildingManagement from '../BuildingManagement/BuildingManagement';
+import Header from '../Header/Header';
 import ForgotPsw from "../Login/ForgotPsw";
 import LogIn from "../Login/LogIn";
+import UsersManagement from '../UsersManagementPage/UsersManagement';
 
 function App() {
   return (
@@ -11,6 +12,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={LogIn} />
           <Route path="/forgotpw" component={ForgotPsw} />
+          <div>
+            <Header />
+            <Route path="/user-management" component={UsersManagement} />
+            <Route path="/building-management" component={BuildingManagement} />
+          </div>
         </Switch>
       </div>
     </Router>

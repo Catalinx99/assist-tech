@@ -1,0 +1,94 @@
+
+.appContainer h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100% !important;
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+  font-size: 1vw !important;
+}
+
+th {
+  background-color: rgb(116 130 131);
+}
+
+td {
+  background-color: rgb(158, 168, 169);
+}
+
+.form {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 10px;
+}
+.addContact {
+  justify-content: center;
+  text-align: center;
+}
+.addContact input {
+  margin-right: 10px;
+  font-size: 1vw;
+  width: 10%;
+}
+
+.deactivated .contactField{
+  opacity: 50%;
+}
+.hidetext { -webkit-text-security: disc; 
+}
+.inputs input{
+  font-size: 1.1vw !important;
+  width: 80%;
+}
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 4px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  
+  .button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 10%;
+  }
+  
+  .button:hover {
+    background-color: #555555;
+    color: white;
+  }

@@ -8,11 +8,11 @@ const ForgotPsw = () => {
       <form method="post">
         <div className="txt_field">
           {/* TO DO change the text type into email */}
-          <input type="text" required/>
+          <input type="text" required />
           <span></span>
           <label> Email </label>
         </div>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   )
