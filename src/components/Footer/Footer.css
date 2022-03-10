@@ -1,0 +1,12 @@
+.footers{
+  background-color: rgb(116 130 131) ;
+  overflow: auto;
+}
+.copyright{
+  float:left;
+  padding: 10px;
+}
+.teamName{
+  float:right;
+  padding: 10px;
+}
