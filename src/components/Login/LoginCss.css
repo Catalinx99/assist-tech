@@ -3,7 +3,6 @@ body {
 	padding: 0;
 	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),  url('../../assets/images/background.jpg');
 	background-size: cover;
-	height: 100vh;
 }
 .center {
 	position: absolute;
@@ -75,7 +74,6 @@ form .txt_field{
 }
 .pass a{
   color: #000000;
-	font-size: 14px;
 }
 .pass:hover{
   text-decoration: underline;
