@@ -44,9 +44,9 @@ form td:last-child {
   justify-content: space-evenly;
 }
 
-form * {
+/* form * {
   font-size: 10px;
-}
+} */
 .addContact {
   justify-content: center;
   text-align: center;
