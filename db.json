@@ -151,5 +151,37 @@
       "address": "Suceava",
       "id": 9
     }
+  ],
+  "offices": [
+    {
+      "id": 1,
+      "officeName": "Office name 1",
+      "floorsNumber": 3,
+      "deskCount": "29"
+    },
+    {
+      "officeName": "Office name 2",
+      "floorsNumber": 4,
+      "deskCount": "11",
+      "id": 2
+    },
+    {
+      "officeName": "Office name 4",
+      "floorsNumber": 8,
+      "deskCount": "33",
+      "id": 3
+    },
+    {
+      "officeName": "Office name 11",
+      "floorsNumber": 11,
+      "deskCount": "11",
+      "id": 4
+    },
+    {
+      "officeName": "IT Office",
+      "floorsNumber": "3",
+      "deskCount": "11",
+      "id": 5
+    }
   ]
 }
