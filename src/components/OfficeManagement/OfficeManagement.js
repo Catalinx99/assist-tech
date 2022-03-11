@@ -161,7 +161,7 @@ const OfficeManagement = () => {
         </table>
       </form>
       <h2> Add an office </h2>
-      <form onSubmit={handleAddFormSubmit}>
+      <form onSubmit={handleAddFormSubmit} className="addContact">
         <input
           type="text"
           name="officeName"
