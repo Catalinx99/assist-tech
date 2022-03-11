@@ -50,6 +50,7 @@ form * {
 .addContact {
   justify-content: center;
   text-align: center;
+  margin-bottom: 250px;
 }
 .addContact input {
   margin-right: 10px;
