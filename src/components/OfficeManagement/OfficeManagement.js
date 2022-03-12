@@ -1,16 +1,30 @@
-import { useEffect, Fragment, useState } from "react";
+import * as React from 'react';
+
+import { useEffect, useState } from "react";
+import Button from '@mui/material/Button';
+
 import serviceApi from "../services"
 import "../UsersManagementPage/UsersManagement.css"
 import EditableRowOM from "./EditableRowOM";
 import ReadOnlyRowOM from "./ReadOnlyRowOM";
+import GenericModal from '../../Common/modal/Modal';
+import AddOfficeModal from './AddOfficeModal';
 
 const OfficeManagement = () => {
+  const [open, setOpen] = React.useState(false);
 
   const services = new serviceApi();
   const [offices, setOffices] = useState([]);
+  const [buildingData, setBuildingData] = useState([]);
+
   const getOffices = () => {
     services.get('offices').then((data) => {
       setOffices(data);
+    })
+  }
+  const getBuildings = () => {
+    services.get('buildings').then((data) => {
+      setBuildingData(data);
     })
   }
   useEffect(() => {
@@ -20,13 +34,13 @@ const OfficeManagement = () => {
 
   const [addFormData, setAddFormData] = useState({
     officeName: '',
-    floorsNumber: '',
+    floorNumber: '',
     deskCount: ''
   });
 
   const [editFormData, setEditFormData] = useState({
     officeName: '',
-    floorsNumber: '',
+    floorNumber: '',
     deskCount: ''
   })
 
@@ -58,45 +72,36 @@ const OfficeManagement = () => {
 
   }
 
-  const handleAddFormSubmit = (event) => {
-    event.preventDefault();
-    const newOffice = {
-      officeName: addFormData.officeName,
-      floorsNumber: addFormData.floorsNumber,
-      deskCount: addFormData.deskCount
+  const createOffice = (data) => {
+    const newFormattedOffice = {
+      officeName: data.officeName,
+      floorNumber: Number(data.floorNumber),
+      deskCount: Number(data.deskCount),
+      buildingId: Number(data.buildingId),
+      buildingName: buildingData.filter(item => Number(item.id) === Number(data.buildingId))[0].name
     }
-    // const newOffices = [...offices, newOffice]
-    // setOffices(newOffices)
-    services.post('offices', newOffice).then(() => {
-      const newOffices = [...offices, newOffice];
-      setOffices(newOffices);
+    services.post('offices', newFormattedOffice).then(() => {
+      const updatedOffices = [...offices, newFormattedOffice];
+      setOffices(updatedOffices);
+      setOpen(false);
     });
-  };
+  }
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
     const editedOffice = {
-      id: editOfficeId,
       officeName: editFormData.officeName,
-      floorsNumber: editFormData.floorsNumber,
+      floorNumber: editFormData.floorNumber,
       deskCount: editFormData.deskCount
     }
-    services.put(`offices/${editOfficeId}`, editedOffice).then(() => {
-      const newOffices = [...offices];
+    // services.put(`offices/${editOfficeId}`, editedOffice).then(() => {
+    //   const newOffices = [...offices];
 
-      const index = offices.findIndex((office) => office.id === editOfficeId);
-      newOffices[index] = editedOffice;
-      setOffices(newOffices);
-    })
-    // const newOffices = [...offices];
-
-    // const index = offices.findIndex((office) => office.id === editOfficeId);
-    // newOffices[index] = editedOffice;
-
-    // setOffices(newOffices);
-    // setEditOfficeId(null);
-
+    //   const index = offices.findIndex((office) => office.id === editOfficeId);
+    //   newOffices[index] = editedOffice;
+    //   setOffices(newOffices);
+    // })
   }
 
   const handleEditClick = (event, office) => {
@@ -105,7 +110,7 @@ const OfficeManagement = () => {
 
     const formValues = {
       officeName: office.officeName,
-      floorsNumber: office.floorsNumber,
+      floorNumber: office.floorNumber,
       deskCount: office.deskCount
     }
     setEditFormData(formValues);
@@ -130,6 +135,19 @@ const OfficeManagement = () => {
     <div className='appContainer'>
       <form onSubmit={handleEditFormSubmit}>
         <h2> Office Management </h2>
+        <Button onClick={() => setOpen(true)}>New office</Button>
+        <GenericModal
+          open={open}
+          onClose={() => setOpen(false)}
+          title={`${'Add new office'}`}>
+          <AddOfficeModal
+            getBuildings={getBuildings}
+            buildingData={buildingData}
+            handleAddFormChange={handleAddFormChange}
+            onClose={() => setOpen(false)}
+            createOffice={createOffice}
+          />
+        </GenericModal>
         <table>
           <thead>
             <tr>
@@ -160,32 +178,7 @@ const OfficeManagement = () => {
           </tbody>
         </table>
       </form>
-      <h2> Add an office </h2>
-      <form onSubmit={handleAddFormSubmit} className="addContact">
-        <input
-          type="text"
-          name="officeName"
-          required="required"
-          placeholder="Enter an office name "
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="number"
-          name="floorsNumber"
-          required="required"
-          placeholder="Enter a floor number "
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="number"
-          name="deskCount"
-          required="required"
-          placeholder="Enter a desk "
-          onChange={handleAddFormChange}
-        />
-        <button type="submit" className="button"> Add </button>
-      </form>
-    </div>
+    </div >
   )
 }
 export default OfficeManagement
