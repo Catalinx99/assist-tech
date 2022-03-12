@@ -156,29 +156,34 @@
     {
       "id": 1,
       "officeName": "Office name 1",
+      "building": "-",
       "floorsNumber": 3,
       "deskCount": "29"
     },
     {
       "officeName": "Office name 2",
+      "building": "-",
       "floorsNumber": 4,
       "deskCount": "11",
       "id": 2
     },
     {
       "officeName": "Office name 4",
+      "building": "-",
       "floorsNumber": 8,
       "deskCount": "33",
       "id": 3
     },
     {
       "officeName": "Office name 11",
+      "building": "-",
       "floorsNumber": 11,
       "deskCount": "11",
       "id": 4
     },
     {
       "officeName": "IT Office",
+      "building": "-",
       "floorsNumber": "3",
       "deskCount": "11",
       "id": 5
