@@ -11,7 +11,7 @@ export const headerTabsLabel = {
       link: '/#'
     }, {
       name: 'Office Status',
-      link: '/#'
+      link: '/office-status'
     }, {
       name: 'Desk Assignment',
       link: '/#'

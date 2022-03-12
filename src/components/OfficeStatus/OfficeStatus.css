@@ -1,0 +1,15 @@
+.officeStatus-wrapper {
+  color: #ffffff;
+  padding-top: 50px;
+}
+.status-wrapper {
+  width: 40%;
+  margin: auto;
+}
+.status-wrapper-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.status-data {
+  padding-left: 10px;
+}
