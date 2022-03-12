@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import ForgotPsw from "../Login/ForgotPsw";
 import LogIn from "../Login/LogIn";
 import OfficeManagement from '../OfficeManagement/OfficeManagement';
+import OfficeStatus from '../OfficeStatus/OfficeStatus';
 import UsersManagement from '../UsersManagementPage/UsersManagement';
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
             <Route path="/user-management" component={UsersManagement} />
             <Route path="/building-management" component={BuildingManagement} />
             <Route path="/office-management" component={OfficeManagement} />
+            <Route
+              path="/office-status"
+              component={OfficeStatus}
+            />
             <Footer />
           </div>
         </Switch>
