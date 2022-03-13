@@ -1,0 +1,30 @@
+.modal {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  border: 2px solid #000000;
+  box-shadow: 24px;
+  padding: 4px; 
+  background-color:rgb(128, 128, 128, 1);
+  text-align: left;
+}
+.modalChildren {
+  padding: 30px;
+}
+.modalButtonsWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.modalButton{
+  margin: 0 5px !important;
+}
+
+.text-field-input{
+  margin-bottom: 10px !important;
+}
+#modal-modal-title{
+  text-align: center;
+}

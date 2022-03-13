@@ -17,8 +17,8 @@ const EditableRowOM = ({ editFormData, handleEditFormChange, handleCancelClick }
           type="number"
           required="required"
           placeholder='Enter a floor number '
-          name='floorsNumber'
-          value={editFormData.floorsNumber}
+          name='floorNumber'
+          value={editFormData.floorNumber}
           onChange={handleEditFormChange} />
       </td>
       <td>
@@ -26,8 +26,8 @@ const EditableRowOM = ({ editFormData, handleEditFormChange, handleCancelClick }
           type="number"
           required="required"
           placeholder='Enter a floor number '
-          name='floorsNumber'
-          value={editFormData.floorsNumber}
+          name='floorNumber'
+          value={editFormData.floorNumber}
           onChange={handleEditFormChange} />
       </td>
       <td>
@@ -40,7 +40,7 @@ const EditableRowOM = ({ editFormData, handleEditFormChange, handleCancelClick }
           onChange={handleEditFormChange} />
       </td>
       <td>
-        <button type='submit' className="button"> Save </button>
+        <button type="submit" className="button"> Save </button>
         <button type='button' onClick={handleCancelClick} className="button">
           Cancel </button>
       </td>

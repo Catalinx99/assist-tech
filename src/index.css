@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* MUI generic style */
+.MuiIconButton-root {
+  color: black !important;
+}
+.MuiDataGrid-row {
+  background-color: rgb(158, 168, 169);
+}
+.MuiDataGrid-row:hover {
+  opacity: 80% !important;
+  background-color: rgb(158, 168, 169) !important; 
+}
+.MuiDataGrid-row.Mui-selected{
+  opacity: 50% !important;
+  background-color: rgb(158, 168, 169) !important;
+}
+.MuiDataGrid-columnHeaders, .MuiDataGrid-footerContainer  {
+  background-color: rgb(116 130 131);
+}
+
+.rightFormButton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px 0;
+}
+.rightFormButton .MuiButton-containedInherit:hover {
+  color: black;
+}
