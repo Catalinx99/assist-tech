@@ -49,43 +49,45 @@ const OfficeStatus = () => {
   }, []);
 
   return (
-    <div className="officeStatus-wrapper">
-      {viewStatus ? (
-        <StatusPanel
-          selectedOffice={selectedOffice}
-          goBack={goBack}
-          loggedUserRole={loggedUser.role}
-        />
-      ) : (
-        <div className="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th> Office name </th>
-                <th> Building name</th>
-                <th> Floor number</th>
-                <th> Office administrator </th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {officesList.map((office, key) => (
-                <tr key={key}>
-                  <td>{office.officeName}</td>
-                  <td>{office.buildingName}</td>
-                  <td>{office.floorNumber}</td>
-                  <td>{office.officeAdministrator}</td>
-                  <td>
-                    <button onClick={() => handleViewStatus(office)}>View status</button>
-                  </td>
+    <div>
+      <h2 className="status-title">Office status</h2>
+      <div className="officeStatus-wrapper">
+        {viewStatus ? (
+          <StatusPanel
+            selectedOffice={selectedOffice}
+            goBack={goBack}
+            loggedUserRole={loggedUser.role}
+          />
+        ) : (
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th> Office name </th>
+                  <th> Building name</th>
+                  <th> Floor number</th>
+                  <th> Office administrator </th>
+                  <th></th>
                 </tr>
-              )
-              )}
-            </tbody>
-          </table>
-        </div>
-      )}
-
+              </thead>
+              <tbody>
+                {officesList.map((office, key) => (
+                  <tr key={key}>
+                    <td>{office.officeName}</td>
+                    <td>{office.buildingName}</td>
+                    <td>{office.floorNumber}</td>
+                    <td>{office.officeAdministrator}</td>
+                    <td>
+                      <button className="viewbtn" onClick={() => handleViewStatus(office)}>View status</button>
+                    </td>
+                  </tr>
+                )
+                )}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

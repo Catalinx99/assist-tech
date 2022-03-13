@@ -1,6 +1,6 @@
 .officeStatus-wrapper {
   color: #ffffff;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .status-wrapper {
   width: 40%;
@@ -12,4 +12,27 @@
 }
 .status-data {
   padding-left: 10px;
+}
+.status-title{
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+}
+button {
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #555555; 
+  color: #ffffff;
+}
+.action-btns{
+  float:right;
+}
+.backbtn{
+  margin-left: 15px;
 }

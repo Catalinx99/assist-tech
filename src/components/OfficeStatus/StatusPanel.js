@@ -1,4 +1,5 @@
 import React from 'react'
+import { userRoleLabel } from '../../Common/components/constants'
 
 const StatusPanel = ({
   selectedOffice,
@@ -73,10 +74,14 @@ const StatusPanel = ({
         </div>
       </div>
 
-
-      {loggedUserRole !== 'user' ?
-        <button onClick={() => goBack()}>Back</button> : null
-      }
+      <div className='action-btns'>
+        {loggedUserRole === userRoleLabel.adminType ?
+          <button>Edit</button> : null
+        }
+        {loggedUserRole !== userRoleLabel.employeeType ?
+          <button className="backbtn" onClick={() => goBack()}>Back</button> : null
+        }
+      </div>
     </div>
   )
 }
