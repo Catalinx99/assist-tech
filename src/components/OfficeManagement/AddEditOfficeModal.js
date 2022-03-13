@@ -11,7 +11,6 @@ import { Button } from '@mui/material';
 const AddOfficeModal = ({
   getBuildings,
   buildingData,
-  handleAddFormSubmit,
   onClose,
   handleOffice,
   selectedOffices,
