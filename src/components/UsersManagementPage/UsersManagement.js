@@ -146,7 +146,6 @@ const UsersManagement = () => {
               <th> First Name </th>
               <th> Last Name </th>
               <th> Email address </th>
-              <th> Password </th>
               <th> Role </th>
               <th> Gender </th>
               <th> Birth date </th>

@@ -4,13 +4,19 @@
       "firstName": "Jennyss",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
-      "password": "*******",
+      "password": "*****",
       "role": "user",
       "gender": "male",
       "birthDate": "2022-04-09",
-      "nationality": "sss",
+      "nationality": "212",
       "status": "false",
-      "id": 1
+      "id": 1,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 1,
+      "buildingName": "Building TEST",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 50
     },
     {
       "firstName": "Jenny",
@@ -22,54 +28,84 @@
       "birthDate": "22212-02-02",
       "nationality": "22",
       "status": "true",
-      "id": 2
+      "id": 2,
+      "officeId": 2,
+      "officeName": "Office name 2",
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "workRemote": "No",
+      "percentageOfWorkRemote": 0
     },
     {
       "firstName": "Jenny",
       "lastName": "Chasn",
       "email": "jenny.chan@email.com",
-      "password": "*******",
+      "password": "*****",
       "role": "user",
       "gender": "male",
       "birthDate": "23222-02-01",
       "nationality": "s",
       "status": "true",
-      "id": 3
+      "id": 3,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 3,
+      "buildingName": "Building 3",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 20
     },
     {
       "firstName": "Jenny",
       "lastName": "Chazn",
       "email": "jenny.chan@email.com",
-      "password": "*******",
+      "password": "*****",
       "role": "user",
       "gender": "female",
       "birthDate": "2222-02-22",
       "nationality": "2",
       "status": "ss",
-      "id": 4
+      "id": 4,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 3,
+      "buildingName": "Building 3",
+      "workRemote": "fully remote",
+      "percentageOfWorkRemote": 100
     },
     {
       "id": 5,
       "firstName": "Jenny",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
-      "password": "*******",
+      "password": "*****",
       "role": "user",
       "gender": "female",
       "birthDate": "03.12.1999",
-      "status": true
+      "status": true,
+      "officeId": 2,
+      "officeName": "Office name 2",
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 80
     },
     {
       "firstName": "Jenny",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
-      "password": "*******",
+      "password": "*****",
       "role": "user",
       "gender": "male",
       "birthDate": "1999-03-03",
       "nationality": "s",
       "status": "true",
-      "id": 6
+      "id": 6,
+      "officeId": 1,
+      "officeName": "Office name 1",
+      "buildingId": 1,
+      "buildingName": "Building TEST",
+      "workRemote": "No",
+      "percentageOfWorkRemote": 0
     },
     {
       "firstName": "Jenny",
@@ -81,7 +117,13 @@
       "birthDate": "1111-01-02",
       "nationality": "1",
       "status": true,
-      "id": 7
+      "id": 7,
+      "officeId": 2,
+      "officeName": "Office name 2",
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 35
     },
     {
       "firstName": "Catalin",
@@ -93,12 +135,18 @@
       "birthDate": "2222-02-02",
       "nationality": "romanian",
       "status": "false",
-      "id": 8
+      "id": 8,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 3,
+      "buildingName": "Building 3",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 80
     }
   ],
   "buildings": [
     {
-      "name": "Building 1",
+      "name": "Building TEST",
       "floorsCount": 3,
       "address": "Suceava City",
       "id": 1
@@ -155,38 +203,51 @@
   "offices": [
     {
       "id": 1,
+      "buildingId": 1,
+      "buildingName": "Building TEST",
       "officeName": "Office name 1",
-      "building": "-",
-      "floorsNumber": 3,
-      "deskCount": "29"
+      "floorNumber": 1,
+      "usableDesks": 5,
+      "officeAdministrator": "Cosmina Alupoaei",
+      "membersList": [
+        "Alupoaei Cosmina",
+        "member1"
+      ],
+      "deskCount": 5,
+      "usableDesksCount": 4,
+      "occupiedDesksCount": 2
     },
     {
+      "id": 2,
+      "buildingId": 2,
+      "buildingName": "Building 2",
       "officeName": "Office name 2",
-      "building": "-",
-      "floorsNumber": 4,
-      "deskCount": "11",
-      "id": 2
+      "floorNumber": 2,
+      "usableDesks": 3,
+      "officeAdministrator": "Catalin Prisacaru",
+      "membersList": [
+        "member3",
+        "member2"
+      ],
+      "deskCount": 3,
+      "usableDesksCount": 3,
+      "occupiedDesksCount": 2
     },
     {
-      "officeName": "Office name 4",
-      "building": "-",
-      "floorsNumber": 8,
-      "deskCount": "33",
-      "id": 3
-    },
-    {
-      "officeName": "Office name 11",
-      "building": "-",
-      "floorsNumber": 11,
-      "deskCount": "11",
-      "id": 4
-    },
-    {
-      "officeName": "IT Office",
-      "building": "-",
-      "floorsNumber": "3",
-      "deskCount": "11",
-      "id": 5
+      "id": 3,
+      "buildingId": 1,
+      "buildingName": "Building 3",
+      "officeName": "Office name 3",
+      "floorNumber": 2,
+      "usableDesks": 10,
+      "officeAdministrator": "Andreea Balaban",
+      "membersList": [
+        "member4",
+        "member5"
+      ],
+      "deskCount": 10,
+      "usableDesksCount": 8,
+      "occupiedDesksCount": 5
     }
   ]
 }
