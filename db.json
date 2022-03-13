@@ -7,7 +7,7 @@
       "password": "*****",
       "role": "user",
       "gender": "male",
-      "birthDate": "2022-04-09",
+      "birthDate": "2022-04-08",
       "nationality": "212",
       "status": "false",
       "id": 1,
@@ -93,24 +93,6 @@
       "firstName": "Jenny",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
-      "password": "*****",
-      "role": "user",
-      "gender": "male",
-      "birthDate": "1999-03-03",
-      "nationality": "s",
-      "status": "true",
-      "id": 6,
-      "officeId": 1,
-      "officeName": "Office name 1",
-      "buildingId": 1,
-      "buildingName": "Building TEST",
-      "workRemote": "No",
-      "percentageOfWorkRemote": 0
-    },
-    {
-      "firstName": "Jenny",
-      "lastName": "Chan",
-      "email": "jenny.chan@email.com",
       "password": "123",
       "role": "user",
       "gender": "female",
@@ -146,16 +128,16 @@
   ],
   "buildings": [
     {
+      "id": 1,
       "name": "Building TEST",
       "floorsCount": 3,
-      "address": "Suceava City",
-      "id": 1
+      "address": "Suceava City"
     },
     {
+      "id": 2,
       "name": "Building 2",
-      "floorsCount": 1,
-      "address": "Botosani",
-      "id": 2
+      "floorsCount": 3,
+      "address": "Suceava City"
     },
     {
       "name": "Building 3",
@@ -202,22 +184,6 @@
   ],
   "offices": [
     {
-      "id": 1,
-      "buildingId": 1,
-      "buildingName": "Building TEST",
-      "officeName": "Office name 1",
-      "floorNumber": 1,
-      "usableDesks": 5,
-      "officeAdministrator": "Cosmina Alupoaei",
-      "membersList": [
-        "Alupoaei Cosmina",
-        "member1"
-      ],
-      "deskCount": 5,
-      "usableDesksCount": 4,
-      "occupiedDesksCount": 2
-    },
-    {
       "id": 2,
       "buildingId": 2,
       "buildingName": "Building 2",
@@ -231,23 +197,23 @@
       ],
       "deskCount": 3,
       "usableDesksCount": 3,
-      "occupiedDesksCount": 2
+      "occupiedDesksCount": 0
     },
     {
-      "id": 3,
-      "buildingId": 1,
-      "buildingName": "Building 3",
-      "officeName": "Office name 3",
+      "id": 1,
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "officeName": "Office name 1",
       "floorNumber": 2,
-      "usableDesks": 10,
-      "officeAdministrator": "Andreea Balaban",
+      "usableDesks": 3,
+      "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
-        "member4",
-        "member5"
+        "member3",
+        "member2"
       ],
-      "deskCount": 10,
-      "usableDesksCount": 8,
-      "occupiedDesksCount": 5
+      "deskCount": 3,
+      "usableDesksCount": 3,
+      "occupiedDesksCount": 0
     }
   ]
 }
