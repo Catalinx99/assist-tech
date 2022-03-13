@@ -1,0 +1,16 @@
+.pending {
+  color: orange;
+}
+.approved{
+ color: green;
+}
+.rejected {
+  color: red;
+}
+
+.cardWrapper{
+  width: 100%;
+}
+.cardWrapper>div{
+  margin: auto;
+}
