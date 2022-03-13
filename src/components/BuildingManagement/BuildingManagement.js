@@ -67,8 +67,6 @@ const BuildingManagement = () => {
       const newBuildings = [...buildings, newBuilding];
       setBuildings(newBuildings);
     });
-    // const newBuildings = [...buildings, newBuilding];
-    // setBuildings(newBuildings);
   };
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
@@ -87,12 +85,6 @@ const BuildingManagement = () => {
       newBuildings[index] = editedBuilding;
       setBuildings(newBuildings);
     })
-    // const newBuildings = [...buildings];
-    // const index = buildings.findIndex((building) => building.id === editBuildingId);
-    // newBuildings[index] = editedBuilding;
-
-    // setBuildings(newBuildings);
-    // setEditBuildingId(null);
   }
 
   const handleEditClick = (event, building) => {
@@ -130,8 +122,8 @@ const BuildingManagement = () => {
             </tr>
           </thead>
           <tbody>
-            {buildings.map((building) => (
-              <>
+            {buildings.map((building, index) => (
+              <Fragment key={index}>
                 {editBuildingId === building.id ?
                   (<EditableRowBM
                     editFormData={editFormData}
@@ -144,7 +136,7 @@ const BuildingManagement = () => {
                       handleDeleteClick={handleDeleteClick} />
                   )
                 }
-              </>
+              </Fragment>
             ))}
           </tbody>
         </table>

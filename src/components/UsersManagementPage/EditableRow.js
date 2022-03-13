@@ -33,15 +33,6 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
       </td>
       <td>
         <input
-          type="password"
-          required="required"
-          placeholder='Enter a password'
-          name='password'
-          value={editFormData.password}
-          onChange={handleEditFormChange} />
-      </td>
-      <td>
-        <input
           type="text"
           required="required"
           placeholder='Enter an role'

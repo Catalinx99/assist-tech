@@ -8,7 +8,6 @@ const ReadOnlyRow = ({ contact, handleEditClick }) => {
       <td className='contactField'> {contact.firstName} </td>
       <td className='contactField'> {contact.lastName} </td>
       <td className='contactField'> {contact.email} </td>
-      <td className='contactField hidetext'> {contact.password} </td>
       <td className='contactField'> {contact.role} </td>
       <td className='contactField'> {contact.gender} </td>
       <td className='contactField'> {contact.birthDate} </td>
