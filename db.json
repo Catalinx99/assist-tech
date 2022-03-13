@@ -19,7 +19,7 @@
       "percentageOfWorkRemote": 50
     },
     {
-      "firstName": "Jenny",
+      "firstName": "Jenny 2",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
       "password": "sdasdasd",
@@ -37,7 +37,7 @@
       "percentageOfWorkRemote": 0
     },
     {
-      "firstName": "Jenny",
+      "firstName": "Jenny 3",
       "lastName": "Chasn",
       "email": "jenny.chan@email.com",
       "password": "*****",
@@ -55,7 +55,7 @@
       "percentageOfWorkRemote": 20
     },
     {
-      "firstName": "Jenny",
+      "firstName": "Jenny 4",
       "lastName": "Chazn",
       "email": "jenny.chan@email.com",
       "password": "*****",
@@ -74,7 +74,7 @@
     },
     {
       "id": 5,
-      "firstName": "Jenny",
+      "firstName": "Jenny 5",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
       "password": "*****",
@@ -90,7 +90,7 @@
       "percentageOfWorkRemote": 80
     },
     {
-      "firstName": "Jenny",
+      "firstName": "Jenny 6",
       "lastName": "Chan",
       "email": "jenny.chan@email.com",
       "password": "123",
@@ -213,7 +213,7 @@
       ],
       "deskCount": 3,
       "usableDesksCount": 3,
-      "occupiedDesksCount": 0
+      "occupiedDesksCount": 2
     }
   ],
   "requestsRemote": [

@@ -25,7 +25,8 @@ const UserStatus = () => {
   }
   useEffect(() => {
     getUsersList();
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="appContainer">
