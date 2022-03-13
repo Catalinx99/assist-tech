@@ -73,7 +73,7 @@ const RequestToWorkRemote = () => {
                 requests.map(item => (
                   <div key={item.id}>
                     <Typography sx={{ mb: 1.5, fontSize: 17 }} color="text.secondary">
-                      Percentage: {item.percentage} %
+                      Remote work time: {item.percentage} %
                     </Typography>
                     <Typography sx={{ mb: 1.5, fontSize: 17 }} color="text.secondary">
                       Reason: {item.reason}

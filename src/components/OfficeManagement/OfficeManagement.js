@@ -33,7 +33,8 @@ const OfficeManagement = () => {
         return (
           <Button
             variant="outlined"
-            color="primary"
+            color="inherit"
+            className="button"
             onClick={(event) => {
               setSelectedOffices(cellValues.row)
               setOpen(true);
@@ -96,18 +97,20 @@ const OfficeManagement = () => {
     <div className='appContainer'>
       <div>
         <h2> Office Management </h2>
-        <Button
-          onClick={() => {
-            setSelectedOffices({});
-            setOpen(true);
-          }}
-          variant="contained"
-          color="primary"
-        >
-          New office
-        </Button>
-        <div style={{ height: 400, width: '100%' }}>
-          <DataGrid rows={offices} columns={columns} />
+        <div className="rightFormButton">
+          <Button
+            onClick={() => {
+              setSelectedOffices({});
+              setOpen(true);
+            }}
+            variant="contained"
+            color="inherit"
+          >
+            New office
+          </Button>
+        </div>
+        <div style={{ width: '100%' }}>
+          <DataGrid rows={offices} columns={columns} autoHeight />
         </div>
         <GenericModal
           open={open}

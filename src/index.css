@@ -30,3 +30,12 @@ code {
 .MuiDataGrid-columnHeaders, .MuiDataGrid-footerContainer  {
   background-color: rgb(116 130 131);
 }
+
+.rightFormButton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px 0;
+}
+.rightFormButton .MuiButton-containedInherit:hover {
+  color: black;
+}
