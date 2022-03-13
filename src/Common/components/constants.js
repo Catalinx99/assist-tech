@@ -14,96 +14,50 @@ export const headerTabsLabel = {
       link: '/office-status'
     }, {
       name: 'Desk Assignment',
-      link: '/#'
+      link: '/desk-assignment'
     }, {
       name: 'Request to work remote',
-      link: '/#'
+      link: '/request-to-work-remote'
     }, {
       name: 'Remote work approval',
-      link: '/#'
+      link: '/remote-work-approval'
     }, {
       name: 'User Status',
-      link: '/#'
+      link: '/user-status'
     }
   ],
   officeAdministrator: [
     {
       name: 'Office Status',
-      link: '/#'
+      link: '/office-status'
     }, {
       name: 'Desk Assignment',
-      link: '/#'
+      link: '/desk-assignment'
     }, {
       name: 'Request to work remote',
-      link: '/#'
+      link: '/request-to-work-remote'
     }, {
       name: 'User Status',
-      link: '/#'
+      link: '/user-status'
     }
   ],
   employee: [
     {
       name: 'Office Status',
-      link: '/#'
+      link: '/office-status'
     }, {
       name: 'Request to work remote',
-      link: '/#'
+      link: '/request-to-work-remote'
     }, {
       name: 'User Status',
-      link: '/#'
+      link: '/user-status'
     }
   ]
 };
 
 export const userRoleLabel = {
-  adminType: 'admin',
+  adminType: 'Administrator',
   officeAdmType: 'officeAdministrator',
-  employeeType: 'employee',
+  employeeType: 'user',
 }
-export const buildingItems = [
-  {
-    name: 'Building 1',
-    floorsCount: '3',
-    address: 'Suceava'
-  },
-  {
-    name: 'Building 2',
-    floorsCount: '1',
-    address: 'Botosani'
-  },
-  {
-    name: 'Building 3',
-    floorsCount: '2',
-    address: 'Brasov'
-  },
-  {
-    name: 'Building 4',
-    floorsCount: '1',
-    address: 'Bucuresti'
-  },
-  {
-    name: 'Building 5',
-    floorsCount: '5',
-    address: 'Botosani'
-  },
-  {
-    name: 'Building 6',
-    floorsCount: '3',
-    address: 'Suceava'
-  },
-  {
-    name: 'Building 4',
-    floorsCount: '1',
-    address: 'Bucuresti'
-  },
-  {
-    name: 'Building 5',
-    floorsCount: '5',
-    address: 'Botosani'
-  },
-  {
-    name: 'Building 6',
-    floorsCount: '3',
-    address: 'Suceava'
-  }
-]
+

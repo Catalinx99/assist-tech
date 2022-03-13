@@ -7,6 +7,7 @@ import EditableRowBM from "./EditableRowBM";
 const BuildingManagement = () => {
   const services = new serviceApi();
   const [buildings, setBuildings] = useState([]);
+  const [offices, setOffices] = useState([]);
 
   const getBuildings = () => {
     services.get('buildings').then((data) => {
@@ -14,8 +15,15 @@ const BuildingManagement = () => {
     });
   }
 
+  const getOffices = () => {
+    services.get('offices').then((offices) => {
+      setOffices(offices);
+    })
+  }
+
   useEffect(() => {
     getBuildings();
+    getOffices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -43,6 +51,7 @@ const BuildingManagement = () => {
 
     setAddFormData(newFormData);
   };
+
   const handleEditFormChange = (event) => {
     event.preventDefault();
     const fieldName = event.target.getAttribute('name');
@@ -67,9 +76,8 @@ const BuildingManagement = () => {
       const newBuildings = [...buildings, newBuilding];
       setBuildings(newBuildings);
     });
-    // const newBuildings = [...buildings, newBuilding];
-    // setBuildings(newBuildings);
   };
+
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
@@ -80,19 +88,14 @@ const BuildingManagement = () => {
       address: editFormData.address
     }
 
-    services.put(`builgings/${editBuildingId}`, editedBuilding).then(() => {
+    services.put(`buildings/${editBuildingId}`, editedBuilding).then(() => {
       const newBuildings = [...buildings];
 
       const index = buildings.findIndex((building) => building.id === editBuildingId);
       newBuildings[index] = editedBuilding;
       setBuildings(newBuildings);
+      setEditBuildingId(null);
     })
-    // const newBuildings = [...buildings];
-    // const index = buildings.findIndex((building) => building.id === editBuildingId);
-    // newBuildings[index] = editedBuilding;
-
-    // setBuildings(newBuildings);
-    // setEditBuildingId(null);
   }
 
   const handleEditClick = (event, building) => {
@@ -104,18 +107,22 @@ const BuildingManagement = () => {
       address: building.address
     }
     setEditFormData(formValues);
-
   }
+
   const handleCancelClick = () => {
     setEditBuildingId(null);
   }
-  const handleDeleteClick = (buildingId) => {
-    const newBuildings = [...buildings];
 
-    const index = buildings.findIndex((building) => building.id === buildingId);
-    newBuildings.splice(index, 1);
-    setBuildings(newBuildings);
+  const handleDeleteClick = (buildingId) => {
+    services.delete(`buildings/${buildingId}`).then(() => {
+      const newBuildings = [...buildings];
+
+      const index = buildings.findIndex((building) => building.id === buildingId);
+      newBuildings.splice(index, 1);
+      setBuildings(newBuildings);
+    })
   }
+
   return (
     <div className="appContainer">
       <form onSubmit={handleEditFormSubmit}>
@@ -130,21 +137,21 @@ const BuildingManagement = () => {
             </tr>
           </thead>
           <tbody>
-            {buildings.map((building) => (
-              <>
-                {editBuildingId === building.id ?
-                  (<EditableRowBM
+            {buildings.map((building, index) => (
+              <Fragment key={index}>
+                {editBuildingId === building.id ? (
+                  <EditableRowBM
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick} />
-                  ) : (
-                    <ReadOnlyRowBM
-                      building={building}
-                      handleEditClick={handleEditClick}
-                      handleDeleteClick={handleDeleteClick} />
-                  )
-                }
-              </>
+                ) : (
+                  <ReadOnlyRowBM
+                    offices={offices}
+                    building={building}
+                    handleEditClick={handleEditClick}
+                    handleDeleteClick={handleDeleteClick} />
+                )}
+              </Fragment>
             ))}
           </tbody>
         </table>

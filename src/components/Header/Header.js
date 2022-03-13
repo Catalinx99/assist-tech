@@ -17,7 +17,7 @@ import {
 } from '../../Common/components/constants'
 
 const Header = () => {
-  const [userRole, setUserRole] = useState('admin');
+  const [userRole, setUserRole] = useState('Administrator');
   const [headerTabs, setHeaderTabs] = useState([]);
   const [anchorElNav, setAnchorElNav] = useState(null);
 
