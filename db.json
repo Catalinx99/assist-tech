@@ -113,7 +113,7 @@
     },
     {
       "name": "Building 2",
-      "floorsCount": 1,
+      "floorsCount": 7,
       "address": "Botosani",
       "id": 2
     },
@@ -182,7 +182,7 @@
       "buildingId": 2,
       "buildingName": "Building 2",
       "officeName": "Office name 2",
-      "floorNumber": 2,
+      "floorNumber": 4,
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
@@ -195,7 +195,7 @@
     },
     {
       "id": 3,
-      "buildingId": 1,
+      "buildingId": 3,
       "buildingName": "Building 3",
       "officeName": "Office name 3",
       "floorNumber": 2,
@@ -208,6 +208,19 @@
       "deskCount": 10,
       "usableDesksCount": 8,
       "occupiedDesksCount": 5
+    },
+    {
+      "officeName": "UpdateOffice",
+      "floorNumber": 1,
+      "deskCount": 15,
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "usableDesks": 12,
+      "officeAdministrator": "IonicaUpdate",
+      "membersList": [],
+      "usableDesksCount": 0,
+      "occupiedDesksCount": 0,
+      "id": 5
     }
   ]
 }

@@ -8,7 +8,7 @@ export const headerTabsLabel = {
       link: '/building-management'
     }, {
       name: 'Office Management',
-      link: '/#'
+      link: '/office-management'
     }, {
       name: 'Office Status',
       link: '/office-status'

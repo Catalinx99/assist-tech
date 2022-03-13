@@ -1,18 +1,6 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+import "./Modal.css";
 
 const GenericModal = (props) => {
   return (
@@ -23,14 +11,14 @@ const GenericModal = (props) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <p id="modal-modal-title" variant="h6" component="h2">
+        <div className='modal'>
+          <h3 id="modal-modal-title" variant="h6" component="h2">
             {props.title}
-          </p>
-          <div id="modal-modal-description">
+          </h3>
+          <div className='modalChildren' id="modal-modal-description">
             {props.children}
           </div>
-        </Box>
+        </div>
       </Modal>
     </>
   );
