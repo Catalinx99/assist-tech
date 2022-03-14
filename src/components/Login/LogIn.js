@@ -78,6 +78,17 @@ const LogIn = () => {
 						onChange={handleAddFormChange}
 						fullWidth
 					/>
+
+					<div className="txt_field">
+						<input type="text" name="email" required onChange={handleAddFormChange} />
+						<span></span>
+						<label> Email </label>
+					</div>
+					<div className="txt_field">
+						<input type="password" name="password" required onChange={handleAddFormChange} />
+						<span></span>
+						<label> Password </label>
+					</div>
 					<div className="pass">
 						<a href="/forgotpw"> Forgot password ?</a>
 					</div>
