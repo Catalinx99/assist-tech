@@ -19,11 +19,10 @@ const OfficeManagement = () => {
   const [selectedOffices, setSelectedOffices] = useState({});
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 50 },
     { field: 'officeName', headerName: 'Office Name', width: 300 },
     { field: 'buildingName', headerName: 'Building Name', width: 300 },
     { field: 'floorNumber', headerName: 'Floor', width: 80 },
-    { field: 'deskCount', headerName: 'Total Desks count', width: 150 },
+    { field: 'deskCount', headerName: 'Total Desks count', width: 180 },
     { field: 'usableDesksCount', headerName: 'Usable Desks count', width: 150 },
     { field: 'officeAdministrator', headerName: 'Office Administrator', width: 300 },
 
