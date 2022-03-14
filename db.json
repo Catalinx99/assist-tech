@@ -3,8 +3,8 @@
     {
       "firstName": "Ion",
       "lastName": "Marin",
-      "email": "ion@email.com",
-      "password": "*****",
+      "email": "user@email.com",
+      "password": "Parola",
       "role": "user",
       "gender": "male",
       "birthDate": "2022-04-08",
@@ -19,11 +19,11 @@
       "percentageOfWorkRemote": 50
     },
     {
-      "firstName": "Jenny 2",
+      "firstName": "Admin",
       "lastName": "Chan",
-      "email": "jenny.chan@email.com",
-      "password": "sdasdasd",
-      "role": "user",
+      "email": "test@email.com",
+      "password": "test",
+      "role": "administrator",
       "gender": "male",
       "birthDate": "22212-02-02",
       "nationality": "22",
@@ -184,20 +184,20 @@
   ],
   "offices": [
     {
-      "id": 2,
+      "officeName": "Office name 2",
+      "floorNumber": 2,
+      "deskCount": 3,
       "buildingId": 2,
       "buildingName": "Building 2",
-      "officeName": "Office name 2",
-      "floorNumber": 4,
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "member3",
         "member2"
       ],
-      "deskCount": 3,
       "usableDesksCount": 3,
-      "occupiedDesksCount": 0
+      "occupiedDesksCount": 0,
+      "id": 2
     },
     {
       "id": 1,

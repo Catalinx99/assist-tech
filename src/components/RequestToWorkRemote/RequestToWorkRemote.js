@@ -14,11 +14,7 @@ import { Button } from '@mui/material';
 const RequestToWorkRemote = () => {
   const services = new serviceApi();
   const [requests, setRequests] = useState([]);
-
-
-  // const localUserData = localStorage.getItem('user');
-  const loggedUserId = 1; // this will be from localUserData.id
-
+  const localStorageData = JSON.parse(localStorage.getItem('user'));
 
   const [requestsForm, setRequestsForm] = useState({
     percentage: '',
@@ -26,13 +22,12 @@ const RequestToWorkRemote = () => {
     pendingStatus: true,
     approvedStatus: false,
     rejectedStatus: false,
-    userId: loggedUserId,
+    userId: localStorageData.id,
   });
 
 
   const getRequests = () => {
-    // /userId from logged user -> localStorage
-    services.get(`requestsRemote?userId=${loggedUserId}`).then((data) => {
+    services.get(`requestsRemote?userId=${localStorageData.id}`).then((data) => {
       setRequests(data);
     })
   }
@@ -56,6 +51,7 @@ const RequestToWorkRemote = () => {
   const percentageValue = (value) => {
     return `${value}%`;
   }
+
   useEffect(() => {
     getRequests();
     // eslint-disable-next-line react-hooks/exhaustive-deps
