@@ -1,6 +1,7 @@
 import "./LoginCss.css"
 import { useState } from "react";
 import serviceApi from "../services"
+
 import TextField from '@mui/material/TextField';
 
 const LogIn = () => {
@@ -54,6 +55,7 @@ const LogIn = () => {
 			<div className="center">
 				<h1>Login</h1>
 				<form>
+
 					<TextField
 						id="email"
 						className='text-field-input'
@@ -78,6 +80,17 @@ const LogIn = () => {
 						onChange={handleAddFormChange}
 						fullWidth
 					/>
+
+					<div className="txt_field">
+						<input type="text" name="email" required onChange={handleAddFormChange} />
+						<span></span>
+						<label> Email </label>
+					</div>
+					<div className="txt_field">
+						<input type="password" name="password" required onChange={handleAddFormChange} />
+						<span></span>
+						<label> Password </label>
+					</div>
 					<div className="pass">
 						<a href="/forgotpw"> Forgot password ?</a>
 					</div>
