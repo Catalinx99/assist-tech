@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={LogIn} />
           <Route path="/forgotpw" component={ForgotPsw} />
-          <div>
+          <>
             <Header />
             <Route path="/user-management" component={UsersManagement} />
             <Route path="/building-management" component={BuildingManagement} />
@@ -30,8 +30,9 @@ function App() {
             <Route path="/remote-work-approval" component={RemoteWorkApproval} />
             <Route path="/user-status" component={UserStatus} />
             <Footer />
-          </div>
+          </>
         </Switch>
+
       </div>
     </Router>
   );

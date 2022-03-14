@@ -1,31 +1,28 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
+// import MenuItem from '@mui/material/MenuItem';
+// import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
+// import FormControl from '@mui/material/FormControl';
 import { Button } from '@mui/material';
 
 
-const AddOfficeModal = ({
-  getBuildings,
-  buildingData,
+const AddEditUserModal = ({
+  getUsers,
   onClose,
-  handleOffice,
-  selectedOffices,
+  handleUser,
+  selectedUsers,
 }) => {
   const [addFormData, setAddFormData] = useState({
-    officeName: selectedOffices.officeName || '',
-    floorNumber: selectedOffices.floorNumber || '',
-    deskCount: selectedOffices.deskCount || '',
-    buildingId: selectedOffices.buildingId || '',
-    buildingName: selectedOffices.buildingName || '',
-    usableDesks: selectedOffices.usableDesks || '',
-    officeAdministrator: selectedOffices.officeAdministrator || '',
-    membersList: selectedOffices.membersList || [],
-    usableDesksCount: selectedOffices.usableDesksCount || '',
-    occupiedDesksCount: selectedOffices.occupiedDesksCount || []
+    firstName: selectedUsers.firstName || '',
+    lastName: selectedUsers.lastName || '',
+    email: selectedUsers.email || '',
+    password: selectedUsers.password || '',
+    role: selectedUsers.role || '',
+    gender: selectedUsers.gender || '',
+    birthDate: selectedUsers.birthDate || '',
+    nationality: selectedUsers.nationality || '',
   });
 
   const handleAddFormChange = (event) => {
@@ -40,7 +37,7 @@ const AddOfficeModal = ({
   };
 
   useEffect(() => {
-    getBuildings();
+    getUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -48,19 +45,19 @@ const AddOfficeModal = ({
     <>
       <form className="">
         <TextField
-          id="officeId"
+          id="firstName"
           className='text-field-input'
-          label="Office name"
+          label="First Name"
           variant="outlined"
           type="text"
-          name="officeName"
+          name="firstName"
           required
-          placeholder="Enter an office name "
-          value={addFormData.officeName}
+          placeholder="Enter First Name"
+          value={addFormData.firstName}
           onChange={handleAddFormChange}
           fullWidth
         />
-        <FormControl fullWidth>
+        {/* <FormControl fullWidth>
           <InputLabel id="buildingId">Select building</InputLabel>
           <Select
             labelId="buildingId"
@@ -113,50 +110,106 @@ const AddOfficeModal = ({
               }
             </Select>
           </FormControl>
-        )}
+        )} */}
 
 
         <TextField
-          id="deskCountId"
+          id="lastName"
           className='text-field-input'
-          label="Desk Count"
-          variant="outlined"
-          type="number"
-          name="deskCount"
-          required
-          placeholder="Enter desk count "
-          value={addFormData.deskCount}
-          onChange={handleAddFormChange}
-          fullWidth
-        />
-
-
-        <TextField
-          id="usableDesksId"
-          className='text-field-input'
-          label="Usable Desks"
-          variant="outlined"
-          type="number"
-          name="usableDesks"
-          required
-          placeholder="Enter usable desks "
-          value={addFormData.usableDesks}
-          onChange={handleAddFormChange}
-          fullWidth
-        />
-        <TextField
-          id="officeAdministratorId"
-          className='text-field-input'
-          label="Office Administrator"
+          label="Last Name"
           variant="outlined"
           type="text"
-          name="officeAdministrator"
+          name="lastName"
           required
-          placeholder="Enter office administrator"
-          value={addFormData.officeAdministrator}
+          placeholder="Enter last name "
+          value={addFormData.lastName}
           onChange={handleAddFormChange}
           fullWidth
         />
+
+
+        <TextField
+          id="email"
+          className='text-field-input'
+          label="Email"
+          variant="outlined"
+          type="email"
+          name="email"
+          required
+          placeholder="Enter Email "
+          value={addFormData.email}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+        <TextField
+          id="password"
+          className='text-field-input'
+          label="Password"
+          variant="outlined"
+          type="password"
+          name="password"
+          required
+          placeholder="Enter password"
+          value={addFormData.password}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+        <TextField
+          id="role"
+          className='text-field-input'
+          label="Role"
+          variant="outlined"
+          type="text"
+          name="role"
+          required
+          placeholder="Enter role"
+          value={addFormData.role}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+        <TextField
+          id="gender"
+          className='text-field-input'
+          label="Gender"
+          variant="outlined"
+          type="text"
+          name="gender"
+          required
+          placeholder="Enter gender"
+          value={addFormData.gender}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+        <TextField
+          id="birthDate"
+          className='text-field-input'
+          label="Birth Date"
+          variant="outlined"
+          type="Date"
+          name="birthDate"
+          required
+          placeholder="Enter Birth Date"
+          value={addFormData.birthDate}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+        <TextField
+          id="nationality"
+          className='text-field-input'
+          label="Nationality"
+          variant="outlined"
+          type="text"
+          name="nationality"
+          required
+          placeholder="Enter nationality"
+          value={addFormData.nationality}
+          onChange={handleAddFormChange}
+          fullWidth
+        />
+
+
+
+
 
       </form>
       <div className='modalButtonsWrapper'>
@@ -170,13 +223,13 @@ const AddOfficeModal = ({
           Cancel
         </Button>
 
-        {selectedOffices && Object.keys(selectedOffices).length === 0 ? (
+        {selectedUsers && Object.keys(selectedUsers).length === 0 ? (
           <Button
             variant="contained"
             color="success"
             type="submit"
             className="modalButton"
-            onClick={() => handleOffice(addFormData, 'create')}
+            onClick={() => handleUser(addFormData, 'create')}
           >
             Create
           </Button>
@@ -187,7 +240,7 @@ const AddOfficeModal = ({
             color="success"
             type="submit"
             className="modalButton"
-            onClick={() => handleOffice(addFormData, 'update')}
+            onClick={() => handleUser(addFormData, 'update')}
           >
             Update
           </Button>
@@ -199,4 +252,4 @@ const AddOfficeModal = ({
   )
 }
 
-export default AddOfficeModal;
+export default AddEditUserModal;

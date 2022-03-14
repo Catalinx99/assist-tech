@@ -39,3 +39,12 @@ code {
 .rightFormButton .MuiButton-containedInherit:hover {
   color: black;
 }
+.MuiInput-root:after {
+  border-bottom: 2px solid white !important;
+}
+.MuiInputLabel-root.Mui-focused {
+  color: white !important;
+}
+.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: white !important;
+}
