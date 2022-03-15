@@ -1,7 +1,6 @@
 import "./LoginCss.css"
 import { useState } from "react";
 import serviceApi from "../services"
-
 import TextField from '@mui/material/TextField';
 
 const LogIn = () => {
@@ -39,7 +38,7 @@ const LogIn = () => {
 		password: '',
 	})
 
-	const handleAddFormChange = (event) => {
+	const handleFormChange = (event) => {
 		event.preventDefault();
 		const fieldName = event.target.name;
 		const fieldValue = event.target.value;
@@ -55,7 +54,6 @@ const LogIn = () => {
 			<div className="center">
 				<h1>Login</h1>
 				<form>
-
 					<TextField
 						id="email"
 						className='text-field-input'
@@ -65,7 +63,7 @@ const LogIn = () => {
 						name="email"
 						required
 						placeholder="Enter email address "
-						onChange={handleAddFormChange}
+						onChange={handleFormChange}
 						fullWidth
 					/>
 					<TextField
@@ -77,23 +75,9 @@ const LogIn = () => {
 						name="password"
 						required
 						placeholder="************"
-						onChange={handleAddFormChange}
+						onChange={handleFormChange}
 						fullWidth
 					/>
-
-					<div className="txt_field">
-						<input type="text" name="email" required onChange={handleAddFormChange} />
-						<span></span>
-						<label> Email </label>
-					</div>
-					<div className="txt_field">
-						<input type="password" name="password" required onChange={handleAddFormChange} />
-						<span></span>
-						<label> Password </label>
-					</div>
-					<div className="pass">
-						<a href="/forgotpw"> Forgot password ?</a>
-					</div>
 					<button type="button" className="loginButton" onClick={() => login(loginFormData)}>Login</button>
 				</form>
 			</div>
