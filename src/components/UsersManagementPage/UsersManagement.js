@@ -7,6 +7,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
 import AddEditUserModal from './AddEditUserModal';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Switch from '@mui/material/Switch';
 
 
 
@@ -28,16 +29,22 @@ const UsersManagement = () => {
   }
 
   const columns = [
-    { field: 'firstName', headerName: 'First Name', width: 300 },
-    { field: 'lastName', headerName: 'Last Name', width: 300 },
-    { field: 'email', headerName: 'E-mail Address', width: 80 },
+    { field: 'firstName', headerName: 'First Name', width: 180 },
+    { field: 'lastName', headerName: 'Last Name', width: 180 },
+    { field: 'email', headerName: 'E-mail Address', width: 180 },
     { field: 'role', headerName: 'Role', width: 180 },
     { field: 'gender', headerName: 'Gender', width: 150 },
-    { field: 'birthDate', headerName: 'Birth Date', width: 300 },
-    { field: 'nationality', headerName: 'Nationality', width: 300 },
-
+    { field: 'birthDate', headerName: 'Birth Date', width: 180 },
+    { field: 'nationality', headerName: 'Nationality', width: 180 },
     {
-      field: "editAction",
+      field: 'status', headerName: 'Status', renderCell: (cellValues) => {
+        return (
+          <Switch disabled defaultChecked={cellValues.row.status} />
+        );
+      }, width: 100
+    },
+    {
+      field: "Edit",
       renderCell: (cellValues) => {
         return (
           <Button
@@ -53,10 +60,10 @@ const UsersManagement = () => {
           </Button>
         );
       },
-      width: 80
+      width: 100, disableColumnMenu: true, sortable: false
     },
     {
-      field: "deleteAction",
+      field: "Delete",
       renderCell: (cellValues) => {
         return (
           <Button
@@ -70,7 +77,7 @@ const UsersManagement = () => {
           </Button>
         );
       },
-      with: 80
+      with: 100, disableColumnMenu: true, sortable: false
     }
   ];
   const getUsers = () => {
@@ -94,6 +101,13 @@ const UsersManagement = () => {
       gender: data.gender,
       birthDate: Date(data.birthDate),
       nationality: data.nationality,
+      status: Boolean(data.status),
+      officeId: Number(data.officeId),
+      officeName: data.officeName,
+      buildingId: Number(data.buildingId),
+      buildingName: data.buildingName,
+      workRemote: data.workRemote,
+      percentageOfWorkRemote: Number(data.percentageOfWorkRemote),
     }
     if (type === 'create') {
       services.post('users', newFormattedUser).then(() => {
