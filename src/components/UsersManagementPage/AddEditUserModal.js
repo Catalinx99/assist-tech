@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
 import TextField from '@mui/material/TextField';
-// import MenuItem from '@mui/material/MenuItem';
-// import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-// import FormControl from '@mui/material/FormControl';
+import FormControl from '@mui/material/FormControl';
 import { Button } from '@mui/material';
+
 
 
 const AddEditUserModal = ({
@@ -23,6 +24,13 @@ const AddEditUserModal = ({
     gender: selectedUsers.gender || '',
     birthDate: selectedUsers.birthDate || '',
     nationality: selectedUsers.nationality || '',
+    status: selectedUsers.status || '',
+    officeId: selectedUsers.officeId || '',
+    buildingId: selectedUsers.buildingId || '',
+    buildingName: selectedUsers.buildingName || '',
+    workRemote: selectedUsers.workRemote || '',
+    percentageOfWorkRemote: selectedUsers.percentageOfWorkRemote || '',
+    officeName: selectedUsers.officeName || '',
   });
 
   const handleAddFormChange = (event) => {
@@ -113,6 +121,7 @@ const AddEditUserModal = ({
         )} */}
 
 
+
         <TextField
           id="lastName"
           className='text-field-input'
@@ -154,32 +163,60 @@ const AddEditUserModal = ({
           onChange={handleAddFormChange}
           fullWidth
         />
-        <TextField
-          id="role"
-          className='text-field-input'
-          label="Role"
-          variant="outlined"
-          type="text"
-          name="role"
-          required
-          placeholder="Enter role"
-          value={addFormData.role}
-          onChange={handleAddFormChange}
-          fullWidth
-        />
-        <TextField
-          id="gender"
-          className='text-field-input'
-          label="Gender"
-          variant="outlined"
-          type="text"
-          name="gender"
-          required
-          placeholder="Enter gender"
-          value={addFormData.gender}
-          onChange={handleAddFormChange}
-          fullWidth
-        />
+
+        <FormControl fullWidth>
+          <InputLabel id="role">Select role</InputLabel>
+          <Select
+            labelId="role"
+            className='text-field-input'
+            name="role"
+            label="Select role"
+            value={addFormData.role}
+            onChange={handleAddFormChange}
+            fullWidth
+          >
+            {selectedUsers && Object.keys(selectedUsers).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
+              Select Role
+            </MenuItem>
+            )}
+
+            <MenuItem value="user">
+              User
+            </MenuItem>
+            <MenuItem value="administrator">
+              Administrator
+            </MenuItem>
+            <MenuItem value="office_administrator">
+              Office Administrator
+            </MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl fullWidth>
+          <InputLabel id="gender">Select gender</InputLabel>
+          <Select
+            labelId="gender"
+            className='text-field-input'
+            name="gender"
+            label="Select gender"
+            value={addFormData.gender}
+            onChange={handleAddFormChange}
+            fullWidth
+          >
+            {selectedUsers && Object.keys(selectedUsers).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
+              Select gender
+            </MenuItem>
+            )}
+
+            <MenuItem value="male">
+              Male
+            </MenuItem>
+            <MenuItem value="female">
+              Female
+            </MenuItem>
+          </Select>
+        </FormControl>
+
         <TextField
           id="birthDate"
           className='text-field-input'
@@ -191,8 +228,32 @@ const AddEditUserModal = ({
           placeholder="Enter Birth Date"
           value={addFormData.birthDate}
           onChange={handleAddFormChange}
-          fullWidth
-        />
+          fullWidth />
+
+        <FormControl fullWidth>
+          <InputLabel id="status">Select status</InputLabel>
+          <Select
+            labelId="status"
+            className='text-field-input'
+            name="status"
+            label="Select status"
+            value={addFormData.status}
+            onChange={handleAddFormChange}
+            fullWidth
+          >
+            {selectedUsers && Object.keys(selectedUsers).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
+              Select status
+            </MenuItem>
+            )}
+            <MenuItem value="true">
+              Enable
+            </MenuItem>
+            <MenuItem value="false">
+              Desable
+            </MenuItem>
+          </Select>
+        </FormControl>
+
         <TextField
           id="nationality"
           className='text-field-input'
