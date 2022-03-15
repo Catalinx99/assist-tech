@@ -9,18 +9,7 @@ const DeskAssignment = () => {
   const services = new serviceApi();
   const [usersList, setUsersList] = useState([]);
   const [officesList, setOfficesList] = useState([]);
-  const [loggedUser, setLoggedUser] = useState({
-    firstName: "Catalin",
-    lastName: "Prisacaru",
-    email: "p.catalinv@yahoo.com",
-    // role: "user",
-    // role: "officeAdministrator",
-    role: "Administrator",
-    gender: "male",
-    status: false,
-    id: 1,
-    officeId: 2
-  });
+  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem('user')));
 
   const getUsersList = () => {
     services.get('users').then((data) => {
@@ -30,7 +19,7 @@ const DeskAssignment = () => {
   const getOfficesList = () => {
     services.get('offices').then((offices) => {
       let shownOffices = null;
-      if(loggedUser.role === userRoleLabel.adminType ) {
+      if (loggedUser.role === userRoleLabel.adminType) {
         shownOffices = offices
       } else {
         shownOffices = offices.filter((office) => {

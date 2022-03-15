@@ -5,17 +5,7 @@ import StatusPanel from "./StatusPanel";
 
 const OfficeStatus = () => {
   const services = new serviceApi();
-  const [loggedUser, setLoggedUser] = useState({
-    firstName: "Catalin",
-    lastName: "Prisacaru",
-    email: "p.catalinv@yahoo.com",
-    // role: "user",
-    role: "Administrator",
-    gender: "male",
-    status: false,
-    id: 1,
-    officeId: 2
-  });
+  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem('user')));
   const [viewStatus, setViewStatus] = useState(false);
   const [officesList, setOfficesList] = useState([]);
   const [selectedOffice, setSelectedOffice] = useState({});

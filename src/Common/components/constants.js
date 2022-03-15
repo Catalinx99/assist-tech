@@ -56,8 +56,8 @@ export const headerTabsLabel = {
 };
 
 export const userRoleLabel = {
-  adminType: 'Administrator',
-  officeAdmType: 'officeAdministrator',
+  adminType: 'administrator',
+  officeAdmType: 'office_administrator',
   employeeType: 'user',
 }
 

@@ -48,3 +48,6 @@ code {
 .Mui-focused .MuiOutlinedInput-notchedOutline{
   border-color: white !important;
 }
+.MuiDataGrid-columnHeader .MuiDataGrid-columnHeader--sortable{
+  width:25%;
+}
