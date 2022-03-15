@@ -29,17 +29,18 @@ const UsersManagement = () => {
   }
 
   const columns = [
-    { field: 'firstName', headerName: 'First Name', width: 180 },
-    { field: 'lastName', headerName: 'Last Name', width: 180 },
+    { field: 'firstName', headerName: 'First Name', width: 160 },
+    { field: 'lastName', headerName: 'Last Name', width: 160 },
     { field: 'email', headerName: 'E-mail Address', width: 180 },
     { field: 'role', headerName: 'Role', width: 180 },
     { field: 'gender', headerName: 'Gender', width: 150 },
     { field: 'birthDate', headerName: 'Birth Date', width: 180 },
-    { field: 'nationality', headerName: 'Nationality', width: 180 },
+    { field: 'nationality', headerName: 'Nationality', width: 120 },
     {
       field: 'status', headerName: 'Status', renderCell: (cellValues) => {
+        const checkedValue = cellValues.row.status === "true" ? true : false;
         return (
-          <Switch disabled defaultChecked={cellValues.row.status} />
+          <Switch disabled checked={checkedValue} />
         );
       }, width: 100
     },
@@ -101,7 +102,7 @@ const UsersManagement = () => {
       gender: data.gender,
       birthDate: Date(data.birthDate),
       nationality: data.nationality,
-      status: Boolean(data.status),
+      status: data.status,
       officeId: Number(data.officeId),
       officeName: data.officeName,
       buildingId: Number(data.buildingId),
@@ -125,6 +126,8 @@ const UsersManagement = () => {
       })
     }
   }
+
+
 
 
   return (
