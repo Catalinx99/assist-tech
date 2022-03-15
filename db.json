@@ -43,7 +43,7 @@
       "password": "*****",
       "role": "user",
       "gender": "male",
-      "birthDate": "23222-02-01",
+      "birthDate": "Tue Mar 15 2022 11:51:31 GMT+0200 (Eastern European Standard Time)",
       "nationality": "s",
       "status": true,
       "id": 3,
@@ -52,7 +52,8 @@
       "buildingId": 3,
       "buildingName": "Building 3",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 20
+      "percentageOfWorkRemote": 20,
+      "id": 3
     },
     {
       "firstName": "Jenny 4",
@@ -61,7 +62,7 @@
       "password": "*****",
       "role": "user",
       "gender": "female",
-      "birthDate": "2222-02-22",
+      "birthDate": "Tue Mar 15 2022 11:27:32 GMT+0200 (Eastern European Standard Time)",
       "nationality": "2",
       "status": true,
       "id": 4,
@@ -70,24 +71,26 @@
       "buildingId": 3,
       "buildingName": "Building 3",
       "workRemote": "fully remote",
-      "percentageOfWorkRemote": 100
+      "percentageOfWorkRemote": 100,
+      "id": 4
     },
     {
-      "id": 5,
       "firstName": "Jenny 5",
       "lastName": "Chan",
       "email": "jenny5.chan@email.com",
       "password": "*****",
       "role": "user",
       "gender": "female",
-      "birthDate": "03.12.1999",
-      "status": true,
+      "birthDate": "Tue Mar 15 2022 11:46:11 GMT+0200 (Eastern European Standard Time)",
+      "nationality": "",
+      "status": false,
       "officeId": 2,
       "officeName": "Office name 2",
       "buildingId": 2,
       "buildingName": "Building 2",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 80
+      "percentageOfWorkRemote": 80,
+      "id": 5
     },
     {
       "firstName": "Jenny 6",
@@ -124,6 +127,24 @@
       "buildingName": "Building 3",
       "workRemote": "partially remote",
       "percentageOfWorkRemote": 80
+    },
+    {
+      "firstName": "TTTT",
+      "lastName": "YYYYY",
+      "email": "userTTT@email.com",
+      "password": "parola",
+      "role": "administrator",
+      "gender": "male",
+      "birthDate": "Tue Mar 15 2022 11:14:58 GMT+0200 (Eastern European Standard Time)",
+      "nationality": "ro",
+      "status": false,
+      "officeId": 0,
+      "officeName": "",
+      "buildingId": 0,
+      "buildingName": "",
+      "workRemote": "",
+      "percentageOfWorkRemote": 0,
+      "id": 9
     }
   ],
   "buildings": [

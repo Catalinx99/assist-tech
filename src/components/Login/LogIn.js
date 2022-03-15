@@ -1,6 +1,7 @@
 import "./LoginCss.css"
 import { useState } from "react";
 import serviceApi from "../services"
+import { userRoleLabel } from '../../Common/components/constants'
 import TextField from '@mui/material/TextField';
 
 const LogIn = () => {
@@ -12,13 +13,13 @@ const LogIn = () => {
 				delete formattedUserData.password;
 				localStorage.setItem('user', JSON.stringify(formattedUserData));
 				switch (formattedUserData.role) {
-					case 'user':
+					case userRoleLabel.employeeType:
 						window.location.replace('/office-status');
 						break;
-					case 'administrator':
+					case userRoleLabel.adminType:
 						window.location.replace('/user-management');
 						break;
-					case 'officeAdministrator':
+					case userRoleLabel.officeAdmType:
 						window.location.replace('/office-status');
 						break;
 

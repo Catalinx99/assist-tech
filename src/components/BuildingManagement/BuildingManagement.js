@@ -1,184 +1,146 @@
-import { useEffect, useState, Fragment } from "react";
-import "../UsersManagementPage/UsersManagement.css";
-import serviceApi from "../services";
-import ReadOnlyRowBM from "./ReadOnlyRowBM";
-import EditableRowBM from "./EditableRowBM";
+import * as React from 'react';
+
+import { useEffect, useState } from "react";
+import Button from '@mui/material/Button';
+
+import serviceApi from "../services"
+import "../UsersManagementPage/UsersManagement.css"
+import GenericModal from '../../Common/modal/Modal';
+import { DataGrid } from '@mui/x-data-grid';
+import AddEditBuildingModal from './AddEditBuildingModal';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const BuildingManagement = () => {
+  const [open, setOpen] = React.useState(false);
+
   const services = new serviceApi();
   const [buildings, setBuildings] = useState([]);
-  const [offices, setOffices] = useState([]);
+  const [selectedBuildings, setSelectedBuildings] = useState({});
+
+  const handleDeleteClick = (buildingId) => {
+    services.delete('buildings', buildingId).then(() => {
+      const newBuildings = [...buildings];
+    })
+  }
+  const columns = [
+    { field: 'name', headerName: 'Building Name', width: 300 },
+    { field: 'floorsCount', headerName: 'Floors Count', width: 300 },
+    { field: 'address', headerName: 'Address', width: 300 },
+    {
+      field: "Edit",
+      renderCell: (cellValues) => {
+        return (
+          <Button
+            variant="outlined"
+            color="inherit"
+            className="button"
+            onClick={(event) => {
+              setSelectedBuildings(cellValues.row)
+              setOpen(true);
+            }}
+          >
+            Edit
+          </Button>
+        );
+      },
+      width: 200, sortable: false, disableColumnMenu: true
+    },
+    {
+      field: "Delete",
+      renderCell: (cellValues) => {
+        return (
+          <Button
+            variant="outlined"
+            color="inherit"
+            className="button"
+            endIcon={<DeleteIcon />}
+            disabled={cellValues.row.officeIsEmpty}
+            onClick={() => handleDeleteClick(cellValues.row.id)}
+          >
+            Delete
+          </Button>
+
+        );
+      },
+      width: 200, sortable: false, disableColumnMenu: true
+    }
+  ];
 
   const getBuildings = () => {
-    services.get('buildings').then((data) => {
-      setBuildings(data);
+    services.get('buildings?_embed=offices').then((buildingsData) => {
+      const filteredBuildings = buildingsData.map(buildingItem => {
+        const officeIsEmpty = buildingItem?.offices.filter((item) => item.occupiedDesksCount !== 0);
+        if (officeIsEmpty.length === 0) {
+          buildingItem.officeIsEmpty = false;
+        } else {
+          buildingItem.officeIsEmpty = true;
+        }
+        return buildingItem
+      });
+      setBuildings(filteredBuildings);
     });
-  }
-
-  const getOffices = () => {
-    services.get('offices').then((offices) => {
-      setOffices(offices);
-    })
   }
 
   useEffect(() => {
     getBuildings();
-    getOffices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const [addFormData, setAddFormData] = useState({
-    name: '',
-    floorsCount: '',
-    address: ''
-  })
-  const [editFormData, setEditFormData] = useState({
-    name: '',
-    floorsCount: '',
-    address: ''
-  })
-
-  const [editBuildingId, setEditBuildingId] = useState(null);
-
-  const handleAddFormChange = (event) => {
-    event.preventDefault();
-
-    const fieldName = event.target.getAttribute('name');
-    const fieldValue = event.target.value;
-
-    const newFormData = { ...addFormData };
-    newFormData[fieldName] = fieldValue;
-
-    setAddFormData(newFormData);
-  };
-
-  const handleEditFormChange = (event) => {
-    event.preventDefault();
-    const fieldName = event.target.getAttribute('name');
-    const fieldValue = event.target.value;
-
-    const newFormData = { ...editFormData }
-    newFormData[fieldName] = fieldValue;
-
-    setEditFormData(newFormData);
-  }
-
-  const handleAddFormSubmit = (event) => {
-    event.preventDefault();
-
-    const newBuilding = {
-      name: addFormData.name,
-      floorsCount: addFormData.floorsCount,
-      address: addFormData.address
-    };
-
-    services.post("buildings", newBuilding).then(() => {
-      const newBuildings = [...buildings, newBuilding];
-      setBuildings(newBuildings);
-    });
-  };
-
-  const handleEditFormSubmit = (event) => {
-    event.preventDefault();
-
-    const editedBuilding = {
-      id: editBuildingId,
-      name: editFormData.name,
-      floorsCount: editFormData.floorsCount,
-      address: editFormData.address
+  const handleBuilding = (data, type) => {
+    const newFormattedBuilding = {
+      name: data.name,
+      floorsCount: Number(data.floorsCount),
+      address: data.address,
     }
-
-    services.put(`buildings/${editBuildingId}`, editedBuilding).then(() => {
-      const newBuildings = [...buildings];
-
-      const index = buildings.findIndex((building) => building.id === editBuildingId);
-      newBuildings[index] = editedBuilding;
-      setBuildings(newBuildings);
-      setEditBuildingId(null);
-    })
-  }
-
-  const handleEditClick = (event, building) => {
-    event.preventDefault();
-    setEditBuildingId(building.id);
-    const formValues = {
-      name: building.name,
-      floorsCount: building.floorsCount,
-      address: building.address
+    if (type === 'create') {
+      services.post('buildings', newFormattedBuilding).then(() => {
+        getBuildings();
+        setOpen(false);
+      });
     }
-    setEditFormData(formValues);
-  }
-
-  const handleCancelClick = () => {
-    setEditBuildingId(null);
-  }
-
-  const handleDeleteClick = (buildingId) => {
-    services.delete(`buildings/${buildingId}`).then(() => {
-      const newBuildings = [...buildings];
-
-      const index = buildings.findIndex((building) => building.id === buildingId);
-      newBuildings.splice(index, 1);
-      setBuildings(newBuildings);
-    })
+    if (type === 'update') {
+      services.put(`buildings/${selectedBuildings.id}`, newFormattedBuilding).then(() => {
+        const newBuildings = [...buildings];
+        const index = buildings.findIndex((building) => building.id === selectedBuildings.id);
+        newBuildings[index] = { id: selectedBuildings.id, ...newFormattedBuilding };
+        setBuildings(newBuildings);
+        setOpen(false);
+      })
+    }
   }
 
   return (
-    <div className="appContainer">
-      <form onSubmit={handleEditFormSubmit}>
-        <h2>Buildings Management</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Building name</th>
-              <th>Floors count</th>
-              <th>Building address</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {buildings.map((building, index) => (
-              <Fragment key={index}>
-                {editBuildingId === building.id ? (
-                  <EditableRowBM
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick} />
-                ) : (
-                  <ReadOnlyRowBM
-                    offices={offices}
-                    building={building}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick} />
-                )}
-              </Fragment>
-            ))}
-          </tbody>
-        </table>
-      </form>
-      <h2> Add a Building</h2>
-      <form onSubmit={handleAddFormSubmit}>
-        <input type="text"
-          name="name"
-          required="required"
-          placeholder="Enter building name"
-          onChange={handleAddFormChange}
-        />
-        <input type="number"
-          name="floorsCount"
-          required="required"
-          placeholder="Enter floor count"
-          onChange={handleAddFormChange}
-        />
-        <input type="text"
-          name="address"
-          required="required"
-          placeholder="Enter an address"
-          onChange={handleAddFormChange}
-        />
-        <button type="submit"> Add </button>
-      </form>
-    </div>
+    <div className='appContainer'>
+      <div>
+        <h2> Buildings Management </h2>
+        <div className="rightFormButton">
+          <Button
+            onClick={() => {
+              setSelectedBuildings({});
+              setOpen(true);
+            }}
+            variant="contained"
+            color="inherit"
+          >
+            New building
+          </Button>
+        </div>
+        <div style={{ width: '100%' }}>
+          <DataGrid rows={buildings} columns={columns} autoHeight />
+        </div>
+        <GenericModal
+          open={open}
+          onClose={() => setOpen(false)}
+          title={`${Object.keys(selectedBuildings).length > 0 ? 'Edit building' : 'Create new building'}`}>
+          <AddEditBuildingModal
+            getBuildings={getBuildings}
+            onClose={() => setOpen(false)}
+            handleBuilding={handleBuilding}
+            selectedBuildings={selectedBuildings}
+          />
+        </GenericModal>
+      </div>
+    </div >
   )
 }
 
