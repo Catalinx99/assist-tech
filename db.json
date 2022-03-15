@@ -9,7 +9,7 @@
       "gender": "male",
       "birthDate": "2022-04-08",
       "nationality": "212",
-      "status": "false",
+      "status": false,
       "id": 1,
       "officeId": 3,
       "officeName": "Office name 3",
@@ -27,7 +27,7 @@
       "gender": "male",
       "birthDate": "22212-02-02",
       "nationality": "22",
-      "status": "true",
+      "status": true,
       "id": 2,
       "officeId": 2,
       "officeName": "Office name 2",
@@ -39,60 +39,61 @@
     {
       "firstName": "Jenny 3",
       "lastName": "Chasn",
-      "email": "jenny.chan@email.com",
+      "email": "jenny3.chan@email.com",
       "password": "*****",
       "role": "user",
       "gender": "male",
-      "birthDate": "23222-02-01",
+      "birthDate": "Tue Mar 15 2022 11:51:31 GMT+0200 (Eastern European Standard Time)",
       "nationality": "s",
-      "status": "true",
-      "id": 3,
+      "status": true,
       "officeId": 3,
       "officeName": "Office name 3",
       "buildingId": 3,
       "buildingName": "Building 3",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 20
+      "percentageOfWorkRemote": 20,
+      "id": 3
     },
     {
       "firstName": "Jenny 4",
       "lastName": "Chazn",
-      "email": "jenny.chan@email.com",
+      "email": "jenny4.chan@email.com",
       "password": "*****",
       "role": "user",
       "gender": "female",
-      "birthDate": "2222-02-22",
+      "birthDate": "Tue Mar 15 2022 11:27:32 GMT+0200 (Eastern European Standard Time)",
       "nationality": "2",
-      "status": "ss",
-      "id": 4,
+      "status": true,
       "officeId": 3,
       "officeName": "Office name 3",
       "buildingId": 3,
       "buildingName": "Building 3",
       "workRemote": "fully remote",
-      "percentageOfWorkRemote": 100
+      "percentageOfWorkRemote": 100,
+      "id": 4
     },
     {
-      "id": 5,
       "firstName": "Jenny 5",
       "lastName": "Chan",
-      "email": "jenny.chan@email.com",
+      "email": "jenny5.chan@email.com",
       "password": "*****",
       "role": "user",
       "gender": "female",
-      "birthDate": "03.12.1999",
-      "status": true,
+      "birthDate": "Tue Mar 15 2022 11:46:11 GMT+0200 (Eastern European Standard Time)",
+      "nationality": "",
+      "status": false,
       "officeId": 2,
       "officeName": "Office name 2",
       "buildingId": 2,
       "buildingName": "Building 2",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 80
+      "percentageOfWorkRemote": 80,
+      "id": 5
     },
     {
       "firstName": "Jenny 6",
       "lastName": "Chan",
-      "email": "jenny.chan@email.com",
+      "email": "jenny6.chan@email.com",
       "password": "123",
       "role": "user",
       "gender": "female",
@@ -116,7 +117,7 @@
       "gender": "male",
       "birthDate": "2222-02-02",
       "nationality": "romanian",
-      "status": "false",
+      "status": false,
       "id": 8,
       "officeId": 3,
       "officeName": "Office name 3",
@@ -124,6 +125,24 @@
       "buildingName": "Building 3",
       "workRemote": "partially remote",
       "percentageOfWorkRemote": 80
+    },
+    {
+      "firstName": "TTTT",
+      "lastName": "YYYYY",
+      "email": "userTTT@email.com",
+      "password": "parola",
+      "role": "administrator",
+      "gender": "male",
+      "birthDate": "Tue Mar 15 2022 11:14:58 GMT+0200 (Eastern European Standard Time)",
+      "nationality": "ro",
+      "status": false,
+      "officeId": 0,
+      "officeName": "",
+      "buildingId": 0,
+      "buildingName": "",
+      "workRemote": "",
+      "percentageOfWorkRemote": 0,
+      "id": 9
     }
   ],
   "buildings": [
@@ -187,7 +206,7 @@
       "officeName": "Office name 2",
       "floorNumber": 2,
       "deskCount": 3,
-      "buildingId": 2,
+      "buildingId": 1,
       "buildingName": "Building 2",
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
@@ -214,17 +233,23 @@
       "deskCount": 3,
       "usableDesksCount": 3,
       "occupiedDesksCount": 2
+    },
+    {
+      "id": 3,
+      "buildingId": 2,
+      "buildingName": "Building 2",
+      "officeName": "Office name 1",
+      "floorNumber": 2,
+      "usableDesks": 3,
+      "officeAdministrator": "Catalin Prisacaru",
+      "membersList": [
+        "member3",
+        "member2"
+      ],
+      "deskCount": 3,
+      "usableDesksCount": 3,
+      "occupiedDesksCount": 2
     }
   ],
-  "requestsRemote": [
-    {
-      "percentage": 30,
-      "reason": "Health problems.",
-      "pendingStatus": true,
-      "approvedStatus": false,
-      "rejectedStatus": false,
-      "userId": 1,
-      "id": 1
-    }
-  ]
+  "requestsRemote": []
 }

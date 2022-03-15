@@ -17,12 +17,13 @@ import {
 } from '../../Common/components/constants'
 
 const Header = () => {
-  const [userRole, setUserRole] = useState('Administrator');
   const [headerTabs, setHeaderTabs] = useState([]);
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const getHeaderTabs = () => {
-    switch (userRole) {
+    const localStorageData = JSON.parse(localStorage.getItem('user'));
+
+    switch (localStorageData.role) {
       case userRoleLabel.adminType:
         return (
           setHeaderTabs(headerTabsLabel.admin)

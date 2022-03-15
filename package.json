@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "set PORT=3000 && react-scripts start",
-    "start-db": "json-server --watch db.json --port 3001",
+    "start-db": "json-server --watch db.json --port 3001 --no-delete-cascade",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
