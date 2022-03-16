@@ -1,5 +1,5 @@
-import React from 'react'
-import { userRoleLabel } from '../../Common/components/constants'
+import React from 'react';
+import { userRoleLabel } from '../../Common/components/constants';
 
 const StatusPanel = ({
   selectedOffice,
@@ -35,11 +35,11 @@ const StatusPanel = ({
       <div className="status-wrapper-row">
         <div>Members: </div>
         <div className="status-data">
-          <ul>
+          {/* <ul>
             {selectedOffice.membersList.map((member, index) => (
               <li key={index}>{member}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div className="status-wrapper-row">

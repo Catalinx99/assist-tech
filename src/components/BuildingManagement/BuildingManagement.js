@@ -1,10 +1,8 @@
 import * as React from 'react';
-
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-
-import serviceApi from "../services"
-import "../UsersManagementPage/UsersManagement.css"
+import serviceApi from "../services";
+import "../UsersManagementPage/UsersManagement.css";
 import GenericModal from '../../Common/modal/Modal';
 import { DataGrid } from '@mui/x-data-grid';
 import AddEditBuildingModal from './AddEditBuildingModal';
@@ -24,9 +22,9 @@ const BuildingManagement = () => {
     })
   }
   const columns = [
-    { field: 'name', headerName: 'Building Name', width: 300 },
-    { field: 'floorsCount', headerName: 'Floors Count', width: 300 },
-    { field: 'address', headerName: 'Address', width: 300 },
+    { field: 'name', headerName: 'Building Name', width: 300, headerAlign: 'center', align: 'center' },
+    { field: 'floorsCount', headerName: 'Floors Count', width: 300, headerAlign: 'center', align: 'center' },
+    { field: 'address', headerName: 'Address', width: 300, headerAlign: 'center', align: 'center' },
     {
       field: "Edit",
       renderCell: (cellValues) => {
@@ -44,7 +42,7 @@ const BuildingManagement = () => {
           </Button>
         );
       },
-      width: 200, sortable: false, disableColumnMenu: true
+      width: 200, sortable: false, disableColumnMenu: true, headerAlign: 'center', align: 'center'
     },
     {
       field: "Delete",
@@ -63,7 +61,7 @@ const BuildingManagement = () => {
 
         );
       },
-      width: 200, sortable: false, disableColumnMenu: true
+      width: 200, sortable: false, disableColumnMenu: true, headerAlign: 'center', align: 'center'
     }
   ];
 
