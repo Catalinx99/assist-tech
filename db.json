@@ -125,24 +125,6 @@
       "buildingName": "Building 3",
       "workRemote": "partially remote",
       "percentageOfWorkRemote": 80
-    },
-    {
-      "firstName": "TTTT",
-      "lastName": "YYYYY",
-      "email": "userTTT@email.com",
-      "password": "parola",
-      "role": "administrator",
-      "gender": "male",
-      "birthDate": "Tue Mar 15 2022 11:14:58 GMT+0200 (Eastern European Standard Time)",
-      "nationality": "ro",
-      "status": false,
-      "officeId": 0,
-      "officeName": "",
-      "buildingId": 0,
-      "buildingName": "",
-      "workRemote": "",
-      "percentageOfWorkRemote": 0,
-      "id": 9
     }
   ],
   "buildings": [
