@@ -27,8 +27,8 @@ const RemoteWorkApproval = () => {
 
   const services = new serviceApi();
   const [requestsRemote, setRequestsRemote] = useState([]);
-  const localStorageData = JSON.parse(localStorage.getItem('user'));
-  const [selectedUsers, setSelectedUsers] = useState({});
+  // const localStorageData = JSON.parse(localStorage.getItem('user'));
+  // const [selectedUsers, setSelectedUsers] = useState({});
 
 
   const handleDeclineClick = (data) => {
@@ -148,7 +148,7 @@ const RemoteWorkApproval = () => {
   return (
     <div className='appContainer'>
       <h2> Remote Work Approval </h2>
-      <div style={{ width: '100%' }}>
+      <div style={{ width: '80%', display: 'flex', alignSelf: 'center' }}>
         <DataGrid rows={requestsRemote} columns={columns} autoHeight />
       </div>
     </div>
