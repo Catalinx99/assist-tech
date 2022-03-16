@@ -1,7 +1,7 @@
 import * as React from 'react';
-import "./UsersManagement.css"
+import "./UsersManagement.css";
 import { useState, useEffect } from "react";
-import serviceApi from '../services'
+import serviceApi from '../services';
 import GenericModal from '../../Common/modal/Modal';
 import { DataGrid } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
@@ -29,19 +29,19 @@ const UsersManagement = () => {
   }
 
   const columns = [
-    { field: 'firstName', headerName: 'First Name', width: 160 },
-    { field: 'lastName', headerName: 'Last Name', width: 160 },
-    { field: 'email', headerName: 'E-mail Address', width: 180 },
-    { field: 'role', headerName: 'Role', width: 180 },
-    { field: 'gender', headerName: 'Gender', width: 150 },
-    { field: 'birthDate', headerName: 'Birth Date', width: 180 },
-    { field: 'nationality', headerName: 'Nationality', width: 120 },
-    {
+
+    { field: 'firstName', headerName: 'First Name', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'lastName', headerName: 'Last Name', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'email', headerName: 'E-mail Address', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'role', headerName: 'Role', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'gender', headerName: 'Gender', width: 150, headerAlign: 'center', align: 'center' },
+    { field: 'birthDate', headerName: 'Birth Date', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'nationality', headerName: 'Nationality', width: 180, headerAlign: 'center', align: 'center' },
       field: 'status', headerName: 'Status', renderCell: (cellValues) => {
         return (
           <Switch disabled checked={cellValues.row.status} />
         );
-      }, width: 100
+      }, width: 100, headerAlign: 'center', align: 'center'
     },
     {
       field: "Edit",
@@ -60,7 +60,7 @@ const UsersManagement = () => {
           </Button>
         );
       },
-      width: 100, disableColumnMenu: true, sortable: false
+      width: 100, disableColumnMenu: true, sortable: false, headerAlign: 'center', align: 'center'
     },
     {
       field: "Delete",
@@ -77,7 +77,9 @@ const UsersManagement = () => {
           </Button>
         );
       },
-      width: 100, disableColumnMenu: true, sortable: false
+
+      with: 100, disableColumnMenu: true, sortable: false, headerAlign: 'center', align: 'center'
+
     }
   ];
   const getUsers = () => {

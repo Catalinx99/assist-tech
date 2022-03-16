@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { userRoleLabel } from "../../Common/components/constants";
 import serviceApi from "../services";
 import "./OfficeStatus.css";
 import StatusPanel from "./StatusPanel";
@@ -11,7 +12,7 @@ const OfficeStatus = () => {
   const [selectedOffice, setSelectedOffice] = useState({});
 
   const getOfficeStatus = () => {
-    if (loggedUser.role === 'user') {
+    if (loggedUser.role === userRoleLabel.employeeType) {
       setViewStatus(true);
       services.get(`offices/${loggedUser.officeId}`).then((response) => {
         setSelectedOffice(response);

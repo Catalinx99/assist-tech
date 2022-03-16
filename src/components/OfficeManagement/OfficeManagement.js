@@ -1,30 +1,26 @@
 import * as React from 'react';
-
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-
-import serviceApi from "../services"
-import "../UsersManagementPage/UsersManagement.css"
+import serviceApi from "../services";
+import "../UsersManagementPage/UsersManagement.css";
 import GenericModal from '../../Common/modal/Modal';
 import AddEditOfficeModal from './AddEditOfficeModal';
 import { DataGrid } from '@mui/x-data-grid';
 
-
 const OfficeManagement = () => {
   const [open, setOpen] = React.useState(false);
-
   const services = new serviceApi();
   const [offices, setOffices] = useState([]);
   const [buildingData, setBuildingData] = useState([]);
   const [selectedOffices, setSelectedOffices] = useState({});
 
   const columns = [
-    { field: 'officeName', headerName: 'Office Name', width: 300 },
-    { field: 'buildingName', headerName: 'Building Name', width: 300 },
-    { field: 'floorNumber', headerName: 'Floor', width: 80 },
-    { field: 'deskCount', headerName: 'Total Desks count', width: 180 },
-    { field: 'usableDesksCount', headerName: 'Usable Desks count', width: 150 },
-    { field: 'officeAdministrator', headerName: 'Office Administrator', width: 300 },
+    { field: 'officeName', headerName: 'Office Name', width: 300, headerAlign: 'center', align: 'center' },
+    { field: 'buildingName', headerName: 'Building Name', width: 300, headerAlign: 'center', align: 'center' },
+    { field: 'floorNumber', headerName: 'Floor', width: 80, headerAlign: 'center', align: 'center' },
+    { field: 'deskCount', headerName: 'Total Desks count', width: 180, headerAlign: 'center', align: 'center' },
+    { field: 'usableDesksCount', headerName: 'Usable Desks count', width: 150, headerAlign: 'center', align: 'center' },
+    { field: 'officeAdministrator', headerName: 'Office Administrator', width: 300, headerAlign: 'center', align: 'center' },
 
     {
       field: "Actions",
@@ -43,7 +39,7 @@ const OfficeManagement = () => {
           </Button>
         );
       },
-      with: 80
+      with: 80, disableColumnMenu: true, sortable: false, headerAlign: 'center', align: 'center'
     }
   ];
 
