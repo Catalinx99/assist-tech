@@ -20,6 +20,7 @@ const BuildingManagement = () => {
 
   const handleDeleteClick = (buildingId) => {
     services.delete('buildings', buildingId).then(() => {
+      // eslint-disable-next-line no-unused-vars
       const newBuildings = [...buildings];
     })
   }

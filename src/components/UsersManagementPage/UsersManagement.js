@@ -38,9 +38,8 @@ const UsersManagement = () => {
     { field: 'nationality', headerName: 'Nationality', width: 120 },
     {
       field: 'status', headerName: 'Status', renderCell: (cellValues) => {
-        const checkedValue = cellValues.row.status === "true" ? true : false;
         return (
-          <Switch disabled checked={checkedValue} />
+          <Switch disabled checked={cellValues.row.status} />
         );
       }, width: 100
     },
@@ -78,7 +77,7 @@ const UsersManagement = () => {
           </Button>
         );
       },
-      with: 100, disableColumnMenu: true, sortable: false
+      width: 100, disableColumnMenu: true, sortable: false
     }
   ];
   const getUsers = () => {
