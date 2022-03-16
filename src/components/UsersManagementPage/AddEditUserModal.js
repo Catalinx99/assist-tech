@@ -24,7 +24,6 @@ const AddEditUserModal = ({
     gender: selectedUsers.gender || '',
     birthDate: selectedUsers.birthDate || '',
     nationality: selectedUsers.nationality || '',
-    // status: selectedUsers.status || 'true',
     status: (selectedUsers?.status === true || selectedUsers?.status === false) ? selectedUsers.status : true,
     officeId: selectedUsers.officeId || '',
     buildingId: selectedUsers.buildingId || '',
