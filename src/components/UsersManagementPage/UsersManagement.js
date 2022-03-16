@@ -29,6 +29,7 @@ const UsersManagement = () => {
   }
 
   const columns = [
+
     { field: 'firstName', headerName: 'First Name', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'lastName', headerName: 'Last Name', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'email', headerName: 'E-mail Address', width: 180, headerAlign: 'center', align: 'center' },
@@ -36,10 +37,9 @@ const UsersManagement = () => {
     { field: 'gender', headerName: 'Gender', width: 150, headerAlign: 'center', align: 'center' },
     { field: 'birthDate', headerName: 'Birth Date', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'nationality', headerName: 'Nationality', width: 180, headerAlign: 'center', align: 'center' },
-    {
       field: 'status', headerName: 'Status', renderCell: (cellValues) => {
         return (
-          <Switch disabled defaultChecked={cellValues.row.status} />
+          <Switch disabled checked={cellValues.row.status} />
         );
       }, width: 100, headerAlign: 'center', align: 'center'
     },
@@ -77,7 +77,9 @@ const UsersManagement = () => {
           </Button>
         );
       },
+
       with: 100, disableColumnMenu: true, sortable: false, headerAlign: 'center', align: 'center'
+
     }
   ];
   const getUsers = () => {
@@ -101,7 +103,7 @@ const UsersManagement = () => {
       gender: data.gender,
       birthDate: Date(data.birthDate),
       nationality: data.nationality,
-      status: Boolean(data.status),
+      status: data.status,
       officeId: Number(data.officeId),
       officeName: data.officeName,
       buildingId: Number(data.buildingId),
@@ -125,6 +127,8 @@ const UsersManagement = () => {
       })
     }
   }
+
+
 
 
   return (

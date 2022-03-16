@@ -51,3 +51,6 @@ code {
 .MuiDataGrid-columnHeader .MuiDataGrid-columnHeader--sortable{
   width:25%;
 }
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  width: 900px;
+}

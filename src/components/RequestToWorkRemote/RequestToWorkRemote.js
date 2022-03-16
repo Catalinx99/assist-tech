@@ -23,6 +23,8 @@ const RequestToWorkRemote = () => {
     approvedStatus: false,
     rejectedStatus: false,
     userId: localStorageData.id,
+    name: localStorageData.firstName + ' ' + localStorageData.lastName,
+    message: '',
   });
 
 
