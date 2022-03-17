@@ -233,5 +233,17 @@
       "occupiedDesksCount": 2
     }
   ],
-  "requestsRemote": []
+  "requestsRemote": [
+    {
+      "percentage": 40,
+      "reason": "health",
+      "pendingStatus": false,
+      "approvedStatus": false,
+      "rejectedStatus": true,
+      "userId": 2,
+      "name": "Admin Chan",
+      "message": "not interested",
+      "id": 1
+    }
+  ]
 }
