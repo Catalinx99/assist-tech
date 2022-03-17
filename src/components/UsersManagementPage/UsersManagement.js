@@ -29,7 +29,6 @@ const UsersManagement = () => {
   }
 
   const columns = [
-
     { field: 'firstName', headerName: 'First Name', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'lastName', headerName: 'Last Name', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'email', headerName: 'E-mail Address', width: 180, headerAlign: 'center', align: 'center' },
@@ -79,9 +78,7 @@ const UsersManagement = () => {
           </Button>
         );
       },
-
       with: 100, disableColumnMenu: true, sortable: false, headerAlign: 'center', align: 'center'
-
     }
   ];
   const getUsers = () => {
