@@ -111,7 +111,7 @@ const RemoteWorkApproval = () => {
             <Dialog open={open} onClose={handleClose} >
               <DialogTitle>Do you want to decline this request?</DialogTitle>
               <DialogContent >
-                <DialogContentText>
+                <DialogContentText color="white">
                   Reason :
                 </DialogContentText>
                 <TextField
@@ -125,10 +125,12 @@ const RemoteWorkApproval = () => {
                 />
               </DialogContent>
               <DialogActions>
-                <Button onClick={() => {
-                  handleClose()
-                  handleDeclineClick()
-                }}
+                <Button
+                  className="button"
+                  onClick={() => {
+                    handleClose()
+                    handleDeclineClick()
+                  }}
                 >
                   Send
                 </Button>

@@ -53,4 +53,9 @@ code {
 }
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   width: 900px;
+  background-color: #555555;
+  color:white;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+  color:white;
 }
