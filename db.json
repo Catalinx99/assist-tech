@@ -3,7 +3,7 @@
     {
       "firstName": "Ion",
       "lastName": "Marin",
-      "email": "user@email.com",
+      "email": "uinmarin@email.com",
       "password": "Parola",
       "role": "user",
       "gender": "male",
@@ -19,9 +19,9 @@
       "percentageOfWorkRemote": 50
     },
     {
-      "firstName": "Admin",
+      "firstName": "Jon",
       "lastName": "Chan",
-      "email": "test@email.com",
+      "email": "jonchan@email.com",
       "password": "test",
       "role": "administrator",
       "gender": "male",
@@ -37,10 +37,10 @@
       "id": 2
     },
     {
-      "firstName": "Jenny 3",
-      "lastName": "Chasn",
-      "email": "jenny3.chan@email.com",
-      "password": "*****",
+      "firstName": "Jenny ",
+      "lastName": "Kaine",
+      "email": "jenny.kaine@email.com",
+      "password": "Jenny123",
       "role": "user",
       "gender": "male",
       "birthDate": "Tue Mar 15 2022 11:51:31 GMT+0200 (Eastern European Standard Time)",
@@ -55,16 +55,16 @@
       "id": 3
     },
     {
-      "firstName": "Jenny 4",
-      "lastName": "Chazn",
-      "email": "jenny4.chan@email.com",
-      "password": "*****",
+      "firstName": "Liam",
+      "lastName": "Olivia",
+      "email": "oliviali@email.com",
+      "password": "Liam2022",
       "role": "user",
       "gender": "female",
       "birthDate": "Tue Mar 15 2022 11:27:32 GMT+0200 (Eastern European Standard Time)",
       "nationality": "2",
       "status": true,
-      "officeId": 3,
+      "officeId": 1,
       "officeName": "Office name 3",
       "buildingId": 3,
       "buildingName": "Building 3",
@@ -73,10 +73,10 @@
       "id": 4
     },
     {
-      "firstName": "Jenny 5",
-      "lastName": "Chan",
-      "email": "jenny5.chan@email.com",
-      "password": "*****",
+      "firstName": "Noah",
+      "lastName": "Emma",
+      "email": "emma5@email.com",
+      "password": "testNoah",
       "role": "user",
       "gender": "female",
       "birthDate": "Tue Mar 15 2022 11:46:11 GMT+0200 (Eastern European Standard Time)",
@@ -91,17 +91,17 @@
       "id": 5
     },
     {
-      "firstName": "Jenny 6",
-      "lastName": "Chan",
-      "email": "jenny6.chan@email.com",
-      "password": "123",
+      "firstName": "Oliver",
+      "lastName": "Ava",
+      "email": "oliver.ava@email.com",
+      "password": "AvaO123",
       "role": "user",
       "gender": "female",
       "birthDate": "1111-01-02",
       "nationality": "1",
       "status": true,
       "id": 7,
-      "officeId": 2,
+      "officeId": 1,
       "officeName": "Office name 2",
       "buildingId": 2,
       "buildingName": "Building 2",
@@ -112,7 +112,7 @@
       "firstName": "Catalin",
       "lastName": "Prisacaru",
       "email": "p.catalinv@yahoo.com",
-      "password": "123qweasdzxc",
+      "password": "administrator1",
       "role": "Administrator",
       "gender": "male",
       "birthDate": "2222-02-02",
@@ -193,8 +193,8 @@
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
-        "member3",
-        "member2"
+        "Jon Chan",
+        "Noah Emma"
       ],
       "usableDesksCount": 3,
       "occupiedDesksCount": 0,
@@ -209,8 +209,8 @@
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
-        "member3",
-        "member2"
+        "Liam Olivia",
+        "Oliver Ava"
       ],
       "deskCount": 3,
       "usableDesksCount": 3,
@@ -225,8 +225,8 @@
       "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
-        "member3",
-        "member2"
+        "Ion Marin",
+        "Jenny Kaine"
       ],
       "deskCount": 3,
       "usableDesksCount": 3,
@@ -244,6 +244,17 @@
       "name": "Admin Chan",
       "message": "not interested",
       "id": 1
+    },
+    {
+      "percentage": 50,
+      "reason": "Home environment is more comfortable and relaxed.",
+      "pendingStatus": true,
+      "approvedStatus": false,
+      "rejectedStatus": false,
+      "userId": 3,
+      "name": "Jenny  Kaine",
+      "message": "",
+      "id": 2
     }
   ]
 }
