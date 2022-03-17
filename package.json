@@ -1,4 +1,6 @@
 {
+  "proxy": "http://localhost:3000",
+  "homepage": ".",
   "name": "assist-tech",
   "version": "0.1.0",
   "private": true,
@@ -44,7 +46,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:3000",
-  "homepage": "."
+  }
 }
