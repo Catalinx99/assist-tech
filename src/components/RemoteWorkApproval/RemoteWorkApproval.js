@@ -14,9 +14,17 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const RemoteWorkApproval = () => {
 
+  const services = new serviceApi();
   const [open, setOpen] = React.useState(false);
+  const [requestsRemote, setRequestsRemote] = useState([]);
+  const [selectedRequest, setSelectedRequest] = useState({});
+  const [formData, setFormData] = useState({
+    message: selectedRequest.message || ''
+  });
 
-  const handleClickOpen = () => {
+  const handleRejectOpen = (data) => {
+    console.log('data ', data);
+    setSelectedRequest(data);
     setOpen(true);
   };
 
@@ -24,22 +32,29 @@ const RemoteWorkApproval = () => {
     setOpen(false);
   };
 
+  const handleOnChange = (event) => {
+    event.preventDefault();
+    const fieldName = event.target.name || event.target.getAttribute('name');
+    const fieldValue = event.target.value;
 
-  const services = new serviceApi();
-  const [requestsRemote, setRequestsRemote] = useState([]);
-  // const localStorageData = JSON.parse(localStorage.getItem('user'));
-  // const [selectedUsers, setSelectedUsers] = useState({});
+    const newFormData = { ...formData };
+    newFormData[fieldName] = fieldValue;
+    setFormData(fieldValue);
+  };
 
 
-  const handleDeclineClick = (data) => {
+
+
+  const handleDeclineClick = () => {
     const body = {
-      ...data,
+      ...selectedRequest,
       pendingStatus: false,
       rejectedStatus: true,
+      message: formData,
     }
-    services.put(`requestsRemote/${data.id}`, body).then(() => {
+    services.put(`requestsRemote/${selectedRequest.id}`, body).then(() => {
       const newRequests = [...requestsRemote];
-      const index = requestsRemote.findIndex((request) => request.id === data.id);
+      const index = requestsRemote.findIndex((request) => request.id === selectedRequest.id);
       newRequests.splice(index, 1);
       setRequestsRemote(newRequests);
     })
@@ -89,7 +104,7 @@ const RemoteWorkApproval = () => {
               color="inherit"
               className="button decline"
               endIcon={<DeleteIcon />}
-              onClick={() => handleClickOpen(cellValues.row)}
+              onClick={() => handleRejectOpen(cellValues.row)}
             >
               Delete
             </Button>
@@ -104,14 +119,15 @@ const RemoteWorkApproval = () => {
                   margin="dense"
                   label="Reason"
                   type="text"
+                  name="reason"
                   fullWidth
+                  onChange={handleOnChange}
                 />
               </DialogContent>
               <DialogActions>
                 <Button onClick={() => {
                   handleClose()
                   handleDeclineClick()
-                  console.log('handleDeclineClick', handleDeclineClick)
                 }}
                 >
                   Send

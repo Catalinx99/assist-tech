@@ -3,8 +3,8 @@ const headers = {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
 }
-// const domain = 'http://localhost:3001';
-const domain = 'https://assist-tech.herokuapp.com:3001';
+const domain = 'http://localhost:3001';
+// const domain = 'https://assist-tech.herokuapp.com:3001';
 
 function joinURL(baseURL, url) {
   return `${baseURL}/${url}`;
