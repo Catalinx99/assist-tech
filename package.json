@@ -25,7 +25,9 @@
     "start-db": "json-server --watch db.json --port 3001 --no-delete-cascade",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "proxy": "http://localhost:3001",
+    "homepage": "."
   },
   "eslintConfig": {
     "extends": [
