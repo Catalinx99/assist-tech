@@ -37,6 +37,7 @@ const UsersManagement = () => {
     { field: 'gender', headerName: 'Gender', width: 150, headerAlign: 'center', align: 'center' },
     { field: 'birthDate', headerName: 'Birth Date', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'nationality', headerName: 'Nationality', width: 180, headerAlign: 'center', align: 'center' },
+    {
       field: 'status', headerName: 'Status', renderCell: (cellValues) => {
         return (
           <Switch disabled checked={cellValues.row.status} />

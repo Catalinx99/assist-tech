@@ -233,37 +233,5 @@
       "occupiedDesksCount": 2
     }
   ],
-  "requestsRemote": [
-    {
-      "percentage": 70,
-      "reason": "111",
-      "pendingStatus": true,
-      "approvedStatus": true,
-      "rejectedStatus": false,
-      "userId": 3,
-      "name": "Admin Chan11",
-      "id": 2
-    },
-    {
-      "percentage": 70,
-      "reason": "dasdas asd ",
-      "pendingStatus": true,
-      "approvedStatus": true,
-      "rejectedStatus": false,
-      "userId": 1,
-      "name": "Admin Chan",
-      "id": 3
-    },
-    {
-      "percentage": 60,
-      "reason": "oioioioioi oi oi ",
-      "pendingStatus": true,
-      "approvedStatus": false,
-      "rejectedStatus": false,
-      "userId": 2,
-      "name": "Admin Chan",
-      "message": "",
-      "id": 4
-    }
-  ]
+  "requestsRemote": []
 }
