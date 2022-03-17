@@ -24,7 +24,7 @@ const AddEditUserModal = ({
     gender: selectedUsers.gender || '',
     birthDate: selectedUsers.birthDate || '',
     nationality: selectedUsers.nationality || '',
-    status: selectedUsers.status || '',
+    status: (selectedUsers?.status === true || selectedUsers?.status === false) ? selectedUsers.status : true,
     officeId: selectedUsers.officeId || '',
     buildingId: selectedUsers.buildingId || '',
     buildingName: selectedUsers.buildingName || '',
@@ -65,62 +65,6 @@ const AddEditUserModal = ({
           onChange={handleAddFormChange}
           fullWidth
         />
-        {/* <FormControl fullWidth>
-          <InputLabel id="buildingId">Select building</InputLabel>
-          <Select
-            labelId="buildingId"
-            className='text-field-input'
-            name="buildingId"
-            label="Select building"
-            value={addFormData.buildingId}
-            onChange={handleAddFormChange}
-            fullWidth
-          >
-            {selectedOffices && Object.keys(selectedOffices).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
-              Select building
-            </MenuItem>
-            )}
-
-            {
-              buildingData.map((item, index) =>
-                <MenuItem key={index} value={item.id}>
-                  {item.name}
-                </MenuItem>
-              )
-            }
-          </Select>
-        </FormControl>
-
-        {addFormData.buildingId !== '' && (
-
-          <FormControl fullWidth>
-            <InputLabel id="floorId">Select floor</InputLabel>
-            <Select
-              labelId="floorId"
-              id="floorNumber"
-              label="Select floor"
-              name="floorNumber"
-              className='text-field-input'
-              onChange={handleAddFormChange}
-              value={addFormData.floorNumber}
-            >{
-                // eslint-disable-next-line array-callback-return
-                buildingData.map((item, index) => {
-                  if (Number(item.id) === Number(addFormData.buildingId)) {
-                    let optionList = [];
-                    for (let i = 0; i < item.floorsCount; i++) {
-                      optionList.push(<MenuItem key={index + '_' + i} value={i + 1}>{i + 1}</MenuItem>);
-                    }
-                    return optionList;
-                  }
-                }
-                )
-              }
-            </Select>
-          </FormControl>
-        )} */}
-
-
 
         <TextField
           id="lastName"
@@ -220,7 +164,7 @@ const AddEditUserModal = ({
         <TextField
           id="birthDate"
           className='text-field-input'
-          label="Birth Date"
+          label={`${addFormData.birthDate ? 'Birth Date' : ''}`}
           variant="outlined"
           type="Date"
           name="birthDate"
@@ -241,15 +185,11 @@ const AddEditUserModal = ({
             onChange={handleAddFormChange}
             fullWidth
           >
-            {selectedUsers && Object.keys(selectedUsers).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
-              Select status
-            </MenuItem>
-            )}
-            <MenuItem value="true">
+            <MenuItem value={true}>
               Enable
             </MenuItem>
-            <MenuItem value="false">
-              Desable
+            <MenuItem value={false}>
+              Disable
             </MenuItem>
           </Select>
         </FormControl>

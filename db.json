@@ -25,16 +25,16 @@
       "password": "test",
       "role": "administrator",
       "gender": "male",
-      "birthDate": "22212-02-02",
+      "birthDate": "Wed Mar 16 2022 11:08:47 GMT+0200 (Eastern European Standard Time)",
       "nationality": "22",
       "status": true,
-      "id": 2,
       "officeId": 2,
       "officeName": "Office name 2",
       "buildingId": 2,
       "buildingName": "Building 2",
       "workRemote": "No",
-      "percentageOfWorkRemote": 0
+      "percentageOfWorkRemote": 0,
+      "id": 2
     },
     {
       "firstName": "Jenny 3",
@@ -125,24 +125,6 @@
       "buildingName": "Building 3",
       "workRemote": "partially remote",
       "percentageOfWorkRemote": 80
-    },
-    {
-      "firstName": "TTTT",
-      "lastName": "YYYYY",
-      "email": "userTTT@email.com",
-      "password": "parola",
-      "role": "administrator",
-      "gender": "male",
-      "birthDate": "Tue Mar 15 2022 11:14:58 GMT+0200 (Eastern European Standard Time)",
-      "nationality": "ro",
-      "status": false,
-      "officeId": 0,
-      "officeName": "",
-      "buildingId": 0,
-      "buildingName": "",
-      "workRemote": "",
-      "percentageOfWorkRemote": 0,
-      "id": 9
     }
   ],
   "buildings": [
@@ -251,5 +233,17 @@
       "occupiedDesksCount": 2
     }
   ],
-  "requestsRemote": []
+  "requestsRemote": [
+    {
+      "percentage": 40,
+      "reason": "health",
+      "pendingStatus": false,
+      "approvedStatus": false,
+      "rejectedStatus": true,
+      "userId": 2,
+      "name": "Admin Chan",
+      "message": "not interested",
+      "id": 1
+    }
+  ]
 }

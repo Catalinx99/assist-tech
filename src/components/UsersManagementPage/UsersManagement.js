@@ -37,9 +37,10 @@ const UsersManagement = () => {
     { field: 'birthDate', headerName: 'Birth Date', width: 180, headerAlign: 'center', align: 'center' },
     { field: 'nationality', headerName: 'Nationality', width: 180, headerAlign: 'center', align: 'center' },
     {
-      field: 'status', headerName: 'Status', renderCell: (cellValues) => {
+      field: 'status', headerName: 'Status',
+      renderCell: (cellValues) => {
         return (
-          <Switch disabled defaultChecked={cellValues.row.status} />
+          <Switch disabled checked={cellValues.row.status} />
         );
       }, width: 100, headerAlign: 'center', align: 'center'
     },
@@ -101,7 +102,7 @@ const UsersManagement = () => {
       gender: data.gender,
       birthDate: Date(data.birthDate),
       nationality: data.nationality,
-      status: Boolean(data.status),
+      status: data.status,
       officeId: Number(data.officeId),
       officeName: data.officeName,
       buildingId: Number(data.buildingId),
@@ -125,6 +126,8 @@ const UsersManagement = () => {
       })
     }
   }
+
+
 
 
   return (

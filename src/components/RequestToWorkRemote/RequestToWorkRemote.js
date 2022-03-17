@@ -23,6 +23,8 @@ const RequestToWorkRemote = () => {
     approvedStatus: false,
     rejectedStatus: false,
     userId: localStorageData.id,
+    name: localStorageData.firstName + ' ' + localStorageData.lastName,
+    message: '',
   });
 
 
@@ -85,6 +87,11 @@ const RequestToWorkRemote = () => {
                         <span className='rejected'>Rejected</span>
                       )}
                     </Typography>
+                    {item.message && (
+                      <Typography sx={{ mb: 1.5, fontSize: 17 }} color="text.secondary">
+                        Reject reason: {item.message}
+                      </Typography>
+                    )}
                   </div>
                 ))
               }
