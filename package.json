@@ -23,8 +23,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"node server.js\" \"react-scripts start\"",
-    "start-db": "concurrently \"json-server --watch db.json --port 3001 --no-delete-cascade\" \"react-scripts start\"",
+    "start": "concurrently \"json-server --watch db.json --port 3001 --no-delete-cascade\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
