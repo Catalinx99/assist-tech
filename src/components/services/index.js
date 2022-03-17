@@ -4,6 +4,7 @@ const headers = {
   'Content-Type': 'application/json'
 }
 // const domain = 'http://localhost:3001';
+// const domain = 'http://localhost:4000';
 const domain = 'https://assist-tech.herokuapp.com:4000';
 
 function joinURL(baseURL, url) {
