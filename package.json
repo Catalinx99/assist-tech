@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts start",
+    "start": "react-scripts start && node server.js",
     "start-db": "json-server --watch db.json --port 3001 --no-delete-cascade",
     "build": "react-scripts build",
     "test": "react-scripts test",
