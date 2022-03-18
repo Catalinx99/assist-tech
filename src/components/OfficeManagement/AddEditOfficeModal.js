@@ -21,7 +21,6 @@ const AddOfficeModal = ({
     deskCount: selectedOffices.deskCount || '',
     buildingId: selectedOffices.buildingId || '',
     buildingName: selectedOffices.buildingName || '',
-    usableDesks: selectedOffices.usableDesks || '',
     officeAdministrator: selectedOffices.officeAdministrator || '',
     membersList: selectedOffices.membersList || [],
     usableDesksCount: selectedOffices.usableDesksCount || '',
@@ -137,10 +136,10 @@ const AddOfficeModal = ({
           label="Usable Desks"
           variant="outlined"
           type="number"
-          name="usableDesks"
+          name="usableDesksCount"
           required
           placeholder="Enter usable desks "
-          value={addFormData.usableDesks}
+          value={addFormData.usableDesksCount}
           onChange={handleAddFormChange}
           fullWidth
         />

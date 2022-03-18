@@ -3,20 +3,8 @@
     {
       "firstName": "Ion",
       "lastName": "Marin",
-      "email": "uinmarin@email.com",
-      "password": "Parola",
-      "role": "user",
-      "gender": "male",
-      "birthDate": "2022-04-08",
-      "nationality": "212",
-      "status": false,
-      "id": 1,
-      "officeId": 3,
-      "officeName": "Office name 3",
-      "buildingId": 1,
-      "buildingName": "Building TEST",
-      "workRemote": "partially remote",
-      "percentageOfWorkRemote": 50
+      "officeName": "Office 1",
+      "id": 1
     },
     {
       "firstName": "Jon",
@@ -111,20 +99,8 @@
     {
       "firstName": "Catalin",
       "lastName": "Prisacaru",
-      "email": "p.catalinv@yahoo.com",
-      "password": "administrator1",
-      "role": "Administrator",
-      "gender": "male",
-      "birthDate": "2222-02-02",
-      "nationality": "romanian",
-      "status": false,
-      "id": 8,
-      "officeId": 3,
-      "officeName": "Office name 3",
-      "buildingId": 3,
-      "buildingName": "Building 3",
-      "workRemote": "partially remote",
-      "percentageOfWorkRemote": 80
+      "officeName": "Office name 1",
+      "id": 8
     }
   ],
   "buildings": [
@@ -186,18 +162,16 @@
   "offices": [
     {
       "officeName": "Office name 2",
-      "floorNumber": 2,
-      "deskCount": 3,
-      "buildingId": 1,
       "buildingName": "Building 2",
-      "usableDesks": 3,
+      "floorNumber": 4,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Jon Chan",
         "Noah Emma"
       ],
-      "usableDesksCount": 3,
-      "occupiedDesksCount": 0,
+      "deskCount": 4,
+      "usableDesksCount": 2,
+      "occupiedDesksCount": 2,
       "id": 2
     },
     {
@@ -206,7 +180,6 @@
       "buildingName": "Building 2",
       "officeName": "Office name 1",
       "floorNumber": 2,
-      "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Liam Olivia",
@@ -222,7 +195,6 @@
       "buildingName": "Building 2",
       "officeName": "Office name 1",
       "floorNumber": 2,
-      "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Ion Marin",
