@@ -3,7 +3,6 @@
     {
       "firstName": "Ion",
       "lastName": "Marin",
-      "officeName": "Office 1",
       "email": "uinmarin@email.com",
       "password": "Parola",
       "role": "user",
@@ -112,7 +111,6 @@
     {
       "firstName": "Catalin",
       "lastName": "Prisacaru",
-      "officeName": "Office name 1",
       "email": "p.catalinv@yahoo.com",
       "password": "administrator1",
       "role": "Administrator",
@@ -255,6 +253,4 @@
       "id": 2
     }
   ]
-
-  "requestsRemote": []
 }
