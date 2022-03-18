@@ -3,6 +3,7 @@
     {
       "firstName": "Ion",
       "lastName": "Marin",
+      "officeName": "Office 1",
       "email": "uinmarin@email.com",
       "password": "Parola",
       "role": "user",
@@ -111,6 +112,7 @@
     {
       "firstName": "Catalin",
       "lastName": "Prisacaru",
+      "officeName": "Office name 1",
       "email": "p.catalinv@yahoo.com",
       "password": "administrator1",
       "role": "Administrator",
@@ -186,18 +188,16 @@
   "offices": [
     {
       "officeName": "Office name 2",
-      "floorNumber": 2,
-      "deskCount": 3,
-      "buildingId": 1,
       "buildingName": "Building 2",
-      "usableDesks": 3,
+      "floorNumber": 4,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Jon Chan",
         "Noah Emma"
       ],
-      "usableDesksCount": 3,
-      "occupiedDesksCount": 0,
+      "deskCount": 4,
+      "usableDesksCount": 2,
+      "occupiedDesksCount": 2,
       "id": 2
     },
     {
@@ -206,7 +206,6 @@
       "buildingName": "Building 2",
       "officeName": "Office name 1",
       "floorNumber": 2,
-      "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Liam Olivia",
@@ -222,7 +221,6 @@
       "buildingName": "Building 2",
       "officeName": "Office name 1",
       "floorNumber": 2,
-      "usableDesks": 3,
       "officeAdministrator": "Catalin Prisacaru",
       "membersList": [
         "Ion Marin",
@@ -233,5 +231,30 @@
       "occupiedDesksCount": 2
     }
   ],
+  "requestsRemote": [
+    {
+      "percentage": 40,
+      "reason": "health",
+      "pendingStatus": false,
+      "approvedStatus": false,
+      "rejectedStatus": true,
+      "userId": 2,
+      "name": "Admin Chan",
+      "message": "not interested",
+      "id": 1
+    },
+    {
+      "percentage": 50,
+      "reason": "Home environment is more comfortable and relaxed.",
+      "pendingStatus": true,
+      "approvedStatus": false,
+      "rejectedStatus": false,
+      "userId": 3,
+      "name": "Jenny  Kaine",
+      "message": "",
+      "id": 2
+    }
+  ]
+
   "requestsRemote": []
 }

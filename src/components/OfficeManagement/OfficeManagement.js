@@ -65,7 +65,6 @@ const OfficeManagement = () => {
       deskCount: Number(data.deskCount),
       buildingId: Number(data.buildingId),
       buildingName: buildingData.filter(item => Number(item.id) === Number(data.buildingId))[0].name,
-      usableDesks: Number(data.usableDesks),
       officeAdministrator: data.officeAdministrator,
       membersList: data.membersList,
       usableDesksCount: Number(data.usableDesksCount),
