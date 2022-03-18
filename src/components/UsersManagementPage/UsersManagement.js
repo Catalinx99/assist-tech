@@ -100,7 +100,7 @@ const UsersManagement = () => {
       password: data.password,
       role: data.role,
       gender: data.gender,
-      birthDate: Date(data.birthDate),
+      birthDate: data.birthDate,
       nationality: data.nationality,
       status: data.status,
       officeId: Number(data.officeId),

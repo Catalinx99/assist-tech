@@ -7,16 +7,16 @@
       "password": "Parola",
       "role": "user",
       "gender": "male",
-      "birthDate": "2022-04-08",
+      "birthDate": "2311-12-31",
       "nationality": "212",
       "status": false,
-      "id": 1,
       "officeId": 3,
       "officeName": "Office name 3",
       "buildingId": 1,
       "buildingName": "Building TEST",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 50
+      "percentageOfWorkRemote": 50,
+      "id": 1
     },
     {
       "firstName": "Jon",
@@ -25,7 +25,7 @@
       "password": "test",
       "role": "administrator",
       "gender": "male",
-      "birthDate": "Wed Mar 16 2022 11:08:47 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2022-03-09",
       "nationality": "22",
       "status": true,
       "officeId": 2,
@@ -43,7 +43,7 @@
       "password": "Jenny123",
       "role": "user",
       "gender": "male",
-      "birthDate": "Tue Mar 15 2022 11:51:31 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2000-03-03",
       "nationality": "s",
       "status": true,
       "officeId": 3,
@@ -61,7 +61,7 @@
       "password": "Liam2022",
       "role": "user",
       "gender": "female",
-      "birthDate": "Tue Mar 15 2022 11:27:32 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2022-03-29",
       "nationality": "2",
       "status": true,
       "officeId": 1,
@@ -79,7 +79,7 @@
       "password": "testNoah",
       "role": "user",
       "gender": "female",
-      "birthDate": "Tue Mar 15 2022 11:46:11 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2015-02-18",
       "nationality": "",
       "status": false,
       "officeId": 2,
@@ -115,16 +115,16 @@
       "password": "administrator1",
       "role": "Administrator",
       "gender": "male",
-      "birthDate": "2222-02-02",
+      "birthDate": "2022-03-04",
       "nationality": "romanian",
       "status": false,
-      "id": 8,
       "officeId": 3,
       "officeName": "Office name 3",
       "buildingId": 3,
       "buildingName": "Building 3",
       "workRemote": "partially remote",
-      "percentageOfWorkRemote": 80
+      "percentageOfWorkRemote": 80,
+      "id": 8
     }
   ],
   "buildings": [
@@ -233,28 +233,5 @@
       "occupiedDesksCount": 2
     }
   ],
-  "requestsRemote": [
-    {
-      "percentage": 40,
-      "reason": "health",
-      "pendingStatus": false,
-      "approvedStatus": false,
-      "rejectedStatus": true,
-      "userId": 2,
-      "name": "Admin Chan",
-      "message": "not interested",
-      "id": 1
-    },
-    {
-      "percentage": 50,
-      "reason": "Home environment is more comfortable and relaxed.",
-      "pendingStatus": true,
-      "approvedStatus": false,
-      "rejectedStatus": false,
-      "userId": 3,
-      "name": "Jenny  Kaine",
-      "message": "",
-      "id": 2
-    }
-  ]
+  "requestsRemote": []
 }
