@@ -1,6 +1,4 @@
 {
-  "proxy": "https://assist-tech.herokuapp.com:3001",
-  "homepage": ".",
   "name": "assist-tech",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +24,6 @@
   },
   "scripts": {
     "start": "concurrently \"json-server --watch db.json --port 3001 --no-delete-cascade\" \"react-scripts start\"",
-    "start-db": "json-server --watch db.json --port 3001 --no-delete-cascade",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

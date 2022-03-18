@@ -4,6 +4,19 @@
       "firstName": "Ion",
       "lastName": "Marin",
       "officeName": "Office 1",
+      "email": "uinmarin@email.com",
+      "password": "Parola",
+      "role": "user",
+      "gender": "male",
+      "birthDate": "2311-12-31",
+      "nationality": "212",
+      "status": false,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 1,
+      "buildingName": "Building TEST",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 50,
       "id": 1
     },
     {
@@ -13,7 +26,7 @@
       "password": "test",
       "role": "administrator",
       "gender": "male",
-      "birthDate": "Wed Mar 16 2022 11:08:47 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2022-03-09",
       "nationality": "22",
       "status": true,
       "officeId": 2,
@@ -31,7 +44,7 @@
       "password": "Jenny123",
       "role": "user",
       "gender": "male",
-      "birthDate": "Tue Mar 15 2022 11:51:31 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2000-03-03",
       "nationality": "s",
       "status": true,
       "officeId": 3,
@@ -49,7 +62,7 @@
       "password": "Liam2022",
       "role": "user",
       "gender": "female",
-      "birthDate": "Tue Mar 15 2022 11:27:32 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2022-03-29",
       "nationality": "2",
       "status": true,
       "officeId": 1,
@@ -67,7 +80,7 @@
       "password": "testNoah",
       "role": "user",
       "gender": "female",
-      "birthDate": "Tue Mar 15 2022 11:46:11 GMT+0200 (Eastern European Standard Time)",
+      "birthDate": "2015-02-18",
       "nationality": "",
       "status": false,
       "officeId": 2,
@@ -100,6 +113,19 @@
       "firstName": "Catalin",
       "lastName": "Prisacaru",
       "officeName": "Office name 1",
+      "email": "p.catalinv@yahoo.com",
+      "password": "administrator1",
+      "role": "Administrator",
+      "gender": "male",
+      "birthDate": "2022-03-04",
+      "nationality": "romanian",
+      "status": false,
+      "officeId": 3,
+      "officeName": "Office name 3",
+      "buildingId": 3,
+      "buildingName": "Building 3",
+      "workRemote": "partially remote",
+      "percentageOfWorkRemote": 80,
       "id": 8
     }
   ],
@@ -229,4 +255,6 @@
       "id": 2
     }
   ]
+
+  "requestsRemote": []
 }
