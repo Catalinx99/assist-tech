@@ -68,7 +68,7 @@ const DeskModal = ({
           onChange={handleAddFormChange}
           fullWidth
         />
-        {/* <TextField
+        <TextField
           id="officeIf"
           className='text-field-input'
           label="Office name"
@@ -80,9 +80,9 @@ const DeskModal = ({
           value={addFormData.officeName}
           onChange={handleAddFormChange}
           fullWidth
-        /> */}
+        />
 
-        <FormControl fullWidth>
+        {/* <FormControl fullWidth>
           <InputLabel id='officeId'>Select office</InputLabel>
           <Select
             labelId='officeId'
@@ -93,7 +93,7 @@ const DeskModal = ({
             onChange={handleAddFormChange}
             fullWidth
           >
-            {/* {selectedDesks && Object.keys(selectedDesks).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
+            {selectedDesks && Object.keys(selectedDesks).length === 0 && (<MenuItem key={"index_disabled"} value="" disabled>
               Select building
             </MenuItem>
             )}
@@ -103,9 +103,9 @@ const DeskModal = ({
                   {item.name}
                 </MenuItem>
               )
-            } */}
+            }
           </Select>
-        </FormControl>
+        </FormControl> */}
 
       </form>
       <div className='modalButtonsWrapper'>
